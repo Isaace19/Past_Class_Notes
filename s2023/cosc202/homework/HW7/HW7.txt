@@ -1,0 +1,57 @@
+
+Name: Isaac Abella iabella@vols.utk.edu
+Description: recursive function homework.
+
+CS202 Homework 7
+
+Problem 1:
+
+char magic7(unsigned char n, int k=-1) {
+if (n == 0)
+return k;
+return magic7(n>>1, k+1);
+}
+
+(a) Determine what magic7() returns for each of the following values of n shown in hex and binary.
+Do it by hand, not by compiling and running code.
+
+0x00 (0000 0000): -> ouptut is -1; we triggered the base case and leave.
+
+0x01 (0000 0001): -> output is 0 
+
+0x02 (0000 0010): -> output is 1
+
+0x03 (0000 0011): -> output is 1    
+
+0x05 (0000 0101): -> output is 2
+
+0x0d (0000 1101): -> output is 3
+
+0x3a (0011 1010): -> output is 6
+
+0x9f (1001 1111): -> output is 7
+
+
+
+(b) State what magic7() computes.
+
+magic7 is a recusrive check to see how many times you can shift a bit n to the right until it will be 0. 
+when the n value is 0, it will trigger the base case and output the final answer of how many times it takes to shfit.
+
+Ex: when n = 0x00 you didn't need to shift any bits, so the output is -1, so when you get to 0x01, the otput is 0 because you added
+1 to -1 making it 0, so we took one shift to get to 0.
+
+Problem 2:
+Provide an iterative implementation of magic7().
+
+let's just call it magic8
+
+char magic8(unsigned char n){
+    int k = -1; 
+    for(k = -1; n != 0; k++){
+        n = n >> 1;
+    }
+    return k;
+}
+
+as long as n is not equal to 0, this function will continue to shift bits before it outputs the result k. 

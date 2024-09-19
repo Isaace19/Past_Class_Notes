@@ -1,0 +1,141 @@
+Unix/Linux
+
+1. What is Vim and Linux Anyways?
+   vim is a text editor GNU - Unix is an operating system that we use to code in
+
+2. What are some commands that we use in unix?
+   ls - ls shows the current directory contents
+   mkdir - creates a new directory inside of your current path
+   rm - stands for rm, you would do "remove file.cpp" and you can add rm -r in order to remove an entire directory.
+   cp - copy a file, you can do scp for a secure copy file
+   ssh - secure shell login, this is what we do to access the hydra and tesla machines
+   chmod - stand for change mode; it's the access way to changing the permission iside of files.
+   Uses -rwx-wx-wx
+   first characters include d or - d stands for a directory and - stands for file
+
+Searching Algorithms (Know the Steps of the algorithm and how to code) 1. Linear Search Algorithm - it's essentially like a loop
+A loop is conducted and values are searched for one by one, if a match is found then that value is returned; if not, then the code keeps going until there is a match.
+
+    1. Binary Search - Much more efficient and is faster than Linear Search     Algorithms
+        Make sure the list is sorted before starting the algorithm
+        Designate a beginning, midpoint, and the ending of the list.
+
+        Then the code will check to see if the value you are searching for is greater than or less than or equal to the midpoint,
+            If it's greater than, then it will discard the values less than the midpoint
+            If it's less than, then it will discard the values greater than the midpoint
+            If the value is the midpoint, then that's the match!
+            else, the match is invalid and not in the list
+                This is implemented through checking the end(the high in this case), with the being(the low in this case)
+
+    || Will do the pseudocode inside of MidtermReview.cpp
+
+Sorting Algorithms (know the steps of the algorithm and how to code) 1. Bubble Sort - Bubble sorting is when you swap adjacent elements when they are in the wrong order. The sorting alogirthm will compare the first two indexes (0 and 1) and compare their values, if they are not in order, then the code will swap the two and then compare the next indexes and do the same until it can no longer be swapped.
+
+    2. Selection Sort - Stepping through each index look to the right of the index and compare the value with the current value selected and if it's not in order then it should be swapped
+
+        Selection sort is also the the only sorting algorithm that we decide the final resting spot of the value
+        And unlike a bubble sort - Sort does not have to compare old indexes at any point.
+
+    3. Insertion Sort - Splits a vector into two part and compares the unsorted side of the vector to the sorted side and compares value from unsorted to the sorted, if it happens to be in the wrong order, than the compared value gets moved the sorted side.
+
+    || Will Do the Code inside of MidtermReview.pp - at least in pseudocode ||
+
+4.  Number Systems
+
+    1. How each of the number systems work (decimal, binary, and Hexadecimal)
+
+    Decimal is based off of the relative position within that number
+`    so when you have something like the 1000s place, the 100s place, the 10s place, and the 1s place inside of a number
+    Binary is also base 10. Decimals also consist of powers of 10. and for each ascneding place, its magnitude grows 10x larger
+
+    Binary - Base 2 goes; it only uses 1s and 0s. 1s will stand for on and 0 for off. 1 can also mean true and 0 can mean false
+    Like a decimal number, each of the values are relative to their actual position given when you have a binary number presented to you.
+    For ascending order, it goes up in multiples of 2.
+
+        You will have something like the 8s, 4s, 2s, and 1s place, and then it will go even further witha  16s, 32s, 64, 128 and so on...
+
+        Binary is also denoted with a 0b in front of it when we do binary inside of c++ and assembley there is also a superscript 2 that can follow a number
+
+        to get one byte we use 8 binary digits.
+
+    Hexadecimal - is based on base16. and it works by changing the representation of integers bigger than 9 with letters. This is because Hexadecimal uses the octal system.
+
+    A = 10
+    B = 11
+    C = 12
+    D = 13
+    E = 14
+    F = 15 ----> remember that in hexadecimal it can only go up to F, so when you get something past F, it will shift A to the the next slot and make the other side a 0
+
+    The case does not matter for hexadecimal! You can have an upper or lowercase letter when you format in hexadecimal.
+    For each place in Hexadecimal, you will go up in powers of 16 relative to your position. so you can have 1096, 256, 16, and 16
+
+    2. Be sure that you know how to convert from one system to the other.
+
+       Converting hexadecimal to decimal system
+
+       1. Identify the value of the letter + any following numbers
+       2. Then take that literal number and just subtract in powers of 10 until it is fully in decimal.
+
+       Conversion to base 16
+
+       1. Convert to binary first
+       2. Then you take the hex digit of each 4 binary digits and make a group of them.
+
+       Convesrion to base 2 binary
+
+       1. need to find the numebrs that add up to 84 inside the power of 2, then you can take the left overs with other binary digits.
+       2. Find the largest power of 2 and subtract, then repeat from there!
+
+    3. Know how to write decimal numbers in binary as well as whole numbers.
+       Decimal to Binary = Take the relative numbers in 4 and then create their conversion to binary that way.
+       Whole number to binary - Take the highest power of 2 that will go into the value and subtract, the repeat.
+
+Binary operations 1. be able to performa ll of thse operations: &, ', ^j, <<, >>, ~
+
+        & -> LOGICAL AND it's a binary operator that is signed and agnostic, if one bit is 1 and the other is 0,the answer wil be 0
+
+        Reference -> Signed (positive numbers) Agnostic (Can work wilth any values)
+
+        | -> LOGICAL OR it's a binary operator that is signed and agnostic, if one bit is 1 and the other is 0, the the answer is 1
+
+        ^ -> LOGICAL XOR it's a logical operator that is signed and agnostic ALSO KNOWN AS EXLUSIVE OR/LOGICAL OR, if one of the digits being compared is 1, then the result is 1, otehrwise it will be 0
+
+        << -> LOGICAL SHIFT LEFT it's a binary operator is signed and agnostic. When a bit is shifted left, the numbers get pushed out and 0s will fill the void if there is no number there to solve for. The algorithm for the LOGICAL SHIFT LEFT is to do a value * 2.
+
+        >> -> LOGICAL SHIFT RIGHT is a binary operator and is signed and agnostic, when you shift bits to the right, 0s will fill the void that other numbers left behind.
+        The algorithm for Logical shift rights is usually value/2.
+
+        ~ -> LOGICAL NOT is a unary operator, which means that it only works on boolean true or false type logical statements, it is agnostic too.
+        Also known as the "one's complement"
+
+        Algorithm, if you have 0s flip them to 1s and for all the 1s you would flip them to 0s.
+
+
+    binary Operations Etc...
+        XOR can be thought of as invertibility. XOR is the inversion of itself and is used for crytopgraphy and stream ciphers.
+         examples of multiplicatino and division of shifting bits.
+
+        LOGICAL SHFTING LEFT           LOGICAL SHIFTING RIGHT
+        a << 1 is the same as a*2      a >> 1 is the same as a/2
+        a << 2 is the same as a*4      a >> 2 is the same as a/4
+        a<< 3 is the same as a*8       a >> 3 is teh same as a/8
+
+Binary Operations Applications
+
+1.  Be sure to know how to use a set bit, clear bit and a test bit.
+
+    Set Bits - when we use a set bit, it will set the bit value to true, or a 1
+    When we have a clear bit - it will set the bit to false, or to a 0 like turning off a bit
+    When - we have a test bit - it will check to see if that bit is on, or set to 1, it is it will return something like BIT SET ON, if it's not you would get BIT SET OF
+
+2.  Understaind the ASCII table (You would need to memorize the table, but understanidn that each character has a numeric value.)
+
+    Know that the ASCII table is based off of hexadecimla numbering systems.
+
+    So how does ASCII Work? 
+    REFERENCE THE LETTER.CPP FILE INSIDE OF THE ASCII NOTES FOLDER
+
+    Every character in the alphabet can be translated as a ASCII Character 
+
+

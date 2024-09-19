@@ -1,0 +1,87 @@
+***Remember to watch a video on hexadecimals, binary, and coverting up to base16, base10, and base2***
+
+Example = 0x19AC
+0x is the prefix
+1 is the 4096 place
+9 is in the 256 place
+A is in the 16 place
+C is in the 0s place
+
+0x15 and convert this to Base 10 = 21
+0x68 and convert this to base 10 = 107
+
+Each Hex digit represents 4 binary digits
+    I take 0x6B
+    6 is 0110 B is 1011 
+
+Fractions (Decimals)
+Remember that in Base 10 each place in the fraction is part of a number #, magnitude is divided by 10
+
+Example:
+    .2(.1)+.1(.01)+.2(.001)
+        .1 is the 1/10ths place
+        .01 is the 1/100th place
+        .001 is the 1/1000th place
+
+Base 2, magnitude is divided by 2
+    1/2 place
+    1/4 place
+    1/8 place
+
+Base16 magnitude is divided by 16
+    16.11
+    1/16th place
+    1/256th place
+
+Bitwise operators and Binary Data
+    && and both expressions are true the whole thing will be true
+    \\ at least one expressions
+    ! flip logic, think of an if statement
+
+Example:
+    ~NOT ~1100 (12) = 0011 in base 10 has the 1s and 2s place on so you have 3.
+    ~NOT is a flip all bits function of the # 
+    unary operator - works on a single number, you cannot NOT operate two numbers, only works on a single number
+
+XOR - uses the ^ which is why we have to use the math class for exponent because ^ uses XOR
+    Exclusive OR - Only one expression or the other must be true, but NOT both.
+
+Be able to convert Base10 and use bitwise operators  with 4 digits and up to 8 digits
+
+LSHIFT << operator
+    left shift
+    Will shift the value the number of shifts to the left
+    0b0100_1001 << 2 shifts values starting from the left 2 spots, the remaining will be discard because we can 
+    only use 8 diigts, so the output should be 0b0010_0100
+    i.e. is one byte
+
+RSHIFT >> operator
+    right sift
+    0b0100-1001 >> 2 shifts the values starting from the right 2 spots, the remaining will be discarded because we can
+    only use 8 digits, so theo output should be 0b0001_0010
+
+Practice
+    (0b1101_0001 ^ 0b0001_1010) << 3
+    Explanation
+    0b1100_1010 => 0b010_1000 0b0101_1000 Now convert to base10
+        64+16+8 = 88
+
+AND operator
+    X & 0 = 0 True or False?
+    ans = true
+    X & 0xFFFF = X? Assuming X is no larger than 0xFFFF
+        FFFF is all ones, so if you get any number and end it with all 1111s you will
+        get that number back. 0b1010 
+        00000000001010
+        11111111111111 Ones will continue to fill until you reach the value that you reach.
+        Must have a 1 in both place in order for AND to result true; the only way to get a 
+        1 in my result is if X has a 1 in the number at that place.
+        ans = True
+
+    X&X = X         X^Y = Z
+    X|0 = X         Z^Y = X     cryptography
+    X^0 = X
+
+
+    0b10110_001 X
+    ob0111_0110 Y Find Z

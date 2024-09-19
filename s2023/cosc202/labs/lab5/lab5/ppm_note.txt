@@ -1,0 +1,7 @@
+    for (int i = 0; i < Nrow * Ncol; i += block_size)
+    {
+        for (int j = 0; j < block_size && (i + j) < Nrow * Ncol; ++j)
+        {
+            myfile >> img[i].R >> img[i].B >> img[i].B;
+        }
+    }

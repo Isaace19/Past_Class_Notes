@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "__bit_reference": "cpp",
+        "__mutex_base": "cpp",
+        "__split_buffer": "cpp",
+        "string": "cpp",
+        "tuple": "cpp",
+        "vector": "cpp",
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "unordered_map": "cpp"
+    }
+}

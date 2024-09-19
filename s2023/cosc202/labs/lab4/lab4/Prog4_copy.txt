@@ -1,0 +1,241 @@
+/*
+ * Author: Isaac Abella
+ * Description: SHA-1 Implementation
+ */
+
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <string>
+#include <unordered_map>
+#include <fstream>
+using namespace std;
+
+typedef unsigned long ulong;
+
+struct credentials
+{
+    void set_salt(string &);
+    void set_hash(string &);
+    // overloaded operators
+    void operator=(const credentials &);
+    bool operator==(const credentials &);
+
+    string salt;
+    ulong password_hash;
+};
+
+void credentials::set_salt(string &username)
+{
+    salt = "g0b1g0rAnge";
+    for (size_t i = 0; i < salt.size(); ++i)
+    {
+        salt[i] += username[i % username.size()] & 0b111;
+        if (!isalnum(salt[i]))
+        {
+            salt[i] = '*';
+        }
+    }
+}
+
+void credentials::set_hash(string &password)
+{
+    string salted_password = password + salt;
+    // implement cyclic shift of string & salting this is a string shift through hash
+    ulong index = 0;
+    for (size_t i = 0; i < salted_password.length(); ++i)
+    {
+        index = (index << 5) | (index >> 27);
+        index += salted_password[i];
+    }
+    password_hash = index;
+}
+
+void credentials::operator=(const credentials &cred)
+{
+    salt = cred.salt;
+    password_hash = cred.password_hash;
+}
+
+bool credentials::operator==(const credentials &cred)
+{
+    // return value if cred is equal to the password_hash.
+    return (password_hash == cred.password_hash);
+}
+
+istream &operator>>(istream &in, credentials &login)
+{
+    in >> login.salt >> login.password_hash;
+    return in;
+}
+
+ostream &operator<<(ostream &out, const credentials &login)
+{
+    out << left << setw(10) << login.salt << " " << hex << login.password_hash;
+    return out;
+}
+
+typedef unordered_map<string, credentials> hashtable;
+
+void write_hashtable(hashtable &H, bool verbose)
+{
+    H.clear();
+    string username, password;
+    while (cin >> username >> password)
+    {
+        credentials cred;
+        cred.set_salt(username);
+        cred.set_hash(password);
+        H[username] = cred;
+    }
+    if (verbose)
+    {
+        for (int i = 0; i < H.bucket_count(); ++i)
+        {
+            cout << "** S = " << right << setw(4) << i << " N = " << right << setw(5) << H.bucket_count() << " : load = " << fixed << setprecision(2) << H.load_factor() << '\n';
+        }
+
+        for (size_t i = 0; i < H.bucket_count(); ++i)
+        {
+            cout << right << setw(6) << i << right << setw(5) << H.bucket_size(i);
+
+            for (hashtable::local_iterator it = H.begin(i); it != H.end(i); ++it)
+            {
+                cout << " " << it->first;
+            }
+            cout << endl;
+        }
+    }
+
+    ofstream fout("passwd.txt");
+    if (fout.fail())
+    {
+        cerr << "Error: Could not write into file\n";
+        return;
+    }
+
+    for (hashtable::iterator it = H.begin(); it != H.end(); ++it)
+    {
+        fout << setw(10) << it->first << " " << it->second << '\n';
+    }
+    fout.close();
+}
+
+void read_hashtable(hashtable &H, bool verbose)
+{
+    H.clear();
+
+    ifstream input_file("passwd.txt");
+    if (!input_file.is_open())
+    {
+        cerr << "Error: Could not read into file\n";
+        return;
+    }
+    string username;
+    credentials password;
+    while (input_file >> username >> password)
+    {
+        H[username] = password;
+    }
+    input_file.close();
+    if (verbose)
+    {
+        for (int i = 0; i < H.bucket_count(); i++)
+        {
+            int capacity = H.bucket_count();
+            float load = H.load_factor();
+            cout << "** S = " << setw(4) << i << " N = " << setw(4) << capacity << " : load = " << fixed << setprecision(2) << load << '\n';
+        }
+
+        for (size_t i = 0; i < H.bucket_count(); i++)
+        {
+            cout << right << setw(6) << i << right << setw(5) << H.bucket_size(i);
+
+            for (hashtable::local_iterator it = H.begin(i); it != H.end(i); ++it)
+            {
+                cout << " " << it->first;
+            }
+
+            cout << endl;
+        }
+
+        cout << endl;
+    }
+}
+
+int main(int argc, char *argv[])
+{
+    if (argc == 1 || argc > 5)
+    {
+        cerr << "usage: ./Prog4 -create|check [-load Z] [-verbose] < logins.txt\n";
+        return 1;
+    }
+    hashtable H;
+    bool create = false, check = false, verbose = false;
+
+    for (int i = 1; i < argc; i++)
+    {
+        string option = argv[i];
+        if (option == "-create")
+        {
+            create = true;
+        }
+        else if (option == "-check")
+        {
+            check = true;
+        }
+        else if (option == "-load")
+        {
+            if (i < (argc - 1))
+                H.max_load_factor(stof(argv[++i]));
+        }
+        else if (option == "-verbose")
+        {
+            verbose = true;
+        }
+        else
+        {
+            cerr << "usage: ./Prog4 -create|check [-load Z] [-verbose] < logins.txt\n";
+        }
+    }
+    if (create)
+    {
+        write_hashtable(H, verbose);
+    }
+    else if (check)
+    {
+        read_hashtable(H, verbose);
+        cout << left;
+        if (verbose)
+            cout << '\n';
+
+        string log_user, log_pass;
+        credentials cred;
+
+        while ((cin >> log_user >> log_pass))
+        {
+            hashtable::iterator it = H.find(log_user);
+            cred.set_salt(log_user);
+            cred.set_hash(log_pass);
+
+            cout << setw(10) << log_user << ' ';
+
+            if (it == H.end())
+            {
+                cout << " bad username";
+            }
+            else if (it->second.password_hash != cred.password_hash)
+            {
+                {
+                    cout << "bad password";
+                }
+            }
+            else
+            {
+                cout << "access granted";
+            }
+            cout << '\n';
+        }
+    }
+    return 0;
+}

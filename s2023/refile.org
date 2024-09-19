@@ -1,0 +1,40 @@
+#+TITLE: Refiling Org note
+#+AUTHOR: Isaac Abella
+
+
+#+Description: Notes throughout the day...
+#+Plan: Plan to just write free notes throughout the day and tasks, than when I have free time commit them to the School.org file
+
+#+Extra: Need to look into my beorg/org note on iphone and see if just adding tasks through that system is more effective. If I get a hold of my old moterolla I could use orgzly...
+
+* [10-18-23] 9:00 - 10:00 am
+** Learning how to apply to org mode more effectively, see if I can sync org files to communicate on iphone or motorolla phone.
+
+** Study for ECE255 Exam this Friday.
+** Review Quiz 1 in ECE255, Kmaps and MSOP simplificiation.
+
+** Planning Schedule For Spring, classes I must take.
+    1. Differential Equations
+    2. chemistry
+    3. Circuits 1
+    4. Data Structures and Algorithms II
+    5. Quantum physics
+       A. Inquire about a physics minor for computer engineering or math minor. I like physics more
+
+
+* [11-01-2023]
+** TODO Create a dictionary sorter with binary trees
+*** Requires scramble/disorder function
+*** Parse words by leading letter, than compare leading letters to sort massive order of numbers
+
+* [11-03-2023]
+** Meeting with Mr. Blacker
+ Schedule to schedule now classes
+ Stay with Dr. Gregor for benefits
+    Better for the future - hope that everyone tries to switch into Disney
+
+    My time to schedule classes opens on: November 13th at 3pm is when I can schedule for my classes.
+
+If I retake for calc 3, I will have to withdraw with a W.
+
+** Talk with Professors about my Calc 3 grade and retaking it.

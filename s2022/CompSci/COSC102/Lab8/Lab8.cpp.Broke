@@ -1,0 +1,190 @@
+/*
+Program Name: Bitset.cpp
+Student Name: Isaac Abella
+Net ID; iabella
+Student ID: 000641840
+Program Description: We will be handling binar data and manipulating it base don the functions created
+    in the template code. Such functions that we can manipulate here would be clearing the bits
+    and some logic gates that do some basic bitmasking on the sets that the user will input.
+*/
+
+#include <iostream>
+#include <vector>
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+class BITSET
+{
+    vector<int> mSets;
+
+public:
+    BITSET();
+    bool Test(int index) const;
+    void Set(int index);
+    void Clear(int index);
+    int GetNumSets() const;
+    int GetSet(int index) const;
+};
+string ToBinary(int bit_set, int spacing = 4);
+
+int main()
+{
+    BITSET sets;
+    string command;
+    int which;
+    do
+    {
+        cout << "> ";
+        if (!(cin >> command) || "q" == command)
+        {
+            break;
+        }
+        if ("t" == command)
+        { // Testing Command, here we will print out the bit.
+            if (!(cin >> which))
+            {
+                cout << "Invalid index\n";
+            }
+            else
+            {
+                cout << sets.Test(which) << '\n';
+            }
+        }
+        else if ("s" == command)
+        { // takes the bit and the given index and sets it to one.
+            if (!(cin >> which))
+            {
+                cout << "Invalid index\n";
+            }
+            else
+            {
+                sets.Set(which);
+            }
+        }
+        else if ("g" == command)
+        {
+            int spacing;
+            string line;
+            getline(cin, line);
+            istringstream sin{line};
+            if (!(sin >> which))
+            {
+                cout << "Invalid index\n";
+            }
+            else
+            {
+                if (!(sin >> spacing))
+                {
+                    spacing = 4;
+                }
+
+                cout << ToBinary(sets.GetSet(which)) << '\n';
+            }
+        }
+        else if ("c" == command)
+        {
+            if (!(cin >> which))
+            {
+                cout << "Invalid index\n";
+            }
+            else
+            {
+                sets.Clear(which);
+            }
+        }
+        else if ("n" == command)
+        {
+            cout << sets.GetNumSets() << '\n';
+        }
+        else
+        {
+            cout << "Unknown command '" << command << "'\n";
+        }
+    } while (true);
+    return 0;
+}
+
+string ToBinary(int bit_set, int spacing)
+{
+    string ret;
+    for (int i = 31; i >= 0; i--)
+    {
+        if (bit_set & (1 << i) ? 1 : 0)
+        {
+            ret += '1';
+        }
+        else
+        {
+            ret += '0';
+        }
+        if ((i % 4) == 0 && i != 0)
+        {
+            ret += ' ';
+        }
+    }
+    return ret;
+}
+
+BITSET::BITSET() : mSets(1, 0)
+{
+}
+
+bool BITSET::Test(int index) const
+{
+    int which_set = index / 32;
+    int which_bit = index % 32;
+    if (which_set >= GetNumSets())
+    {
+        return false;
+    }
+    if ((mSets.at(which_set) & (1 << which_bit)) != 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+void BITSET::Set(int index)
+{
+    int which_set = index / 32;
+    int which_bit = index % 32;
+    if (which_set >= GetNumSets())
+    {
+        mSets.resize(which_set + 1);
+    }
+    mSets.at(which_set) |= (1 << which_bit);
+}
+
+void BITSET::Clear(int index)
+{
+    int which_set = index / 32;
+    int which_bit = index % 32;
+    // If the mSet at the binary value given and the remainder are equal to 0 then we will clear the bits by flipping them to 1
+    if (mSets.at(which_set) && mSets.at(which_bit) == 0)
+    {
+        mSets.at(which_set) &= ~(1 << which_bit);
+    }
+}
+
+int BITSET::GetNumSets() const
+{
+    return static_cast<int>(mSets.size());
+}
+
+int BITSET::GetSet(int which_set) const
+{
+    // Here we check to see if the bitset is less than 0 and LOGICAL or operator to see if it's greater than or equal to the GetNumSet
+    if (which_set < 0 || which_set >= GetNumSets())
+    {
+        return false;
+    }
+    else
+    {
+        return mSets.at(which_set);
+    }
+}

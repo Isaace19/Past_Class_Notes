@@ -1,0 +1,76 @@
+#+TITLE: Isaac's Planner
+#+AUTHOR: Isaac Abella
+#+DESCRIPTION: Org file to use for classes in College
+Try to keep this updated by looking at it everyday in the morning, review what's new for the day, and just cleaning up the file every once and a while :
+#+NOTE: For these summer classes just assume that things are due at midnight unless specified otherwise
+
+* SCHEDULE FOR THE year
+
+** Daily Todo List:
+*** TODO Start finishing the C++ Primer past pointers and data structures.
+*** TODO lowkey follow the emo Classroom of the elite mindset to study.
+*** TODO Need to create a whole emacs todo list of all my classes, probably up to just a week worth of todo and assignments.
+
+***** UTK PLANNER
+#+DESCRIPTION: This is class schedule for UTK classes, will need to add TA hours and Office hours to schedule. And would be good to add lab assignments as TODOs.
+
+
+
+* EF 152 TODO List
+** Instructor: Dr. Chestunutt and Dr. Gelles
+** Location: ZEC 177 Lectures, ZEC 271 Labs
+** Textbook - University Physics: https://efcms.engr.utk.edu/ef152-2023-08/gen/resources.php
+
+[Look at the calendar on the EF website to keep this up to date.]
+
+** TODO Review the last 1-2 Prep Question of FBD and summation
+** TODO EF 1-2 Practice Problems
+** TODO EF Exam 1 on Sep. 14
+SCHEDULED:<2023-09-14 12:40>
+
+
+* CS 202 TODO List
+** Instructor: Dr. McGreogr
+** Location: WAB M307 Lecture, MKB 421 for labs
+** Textboook - The C++ Primer Data Structures and Algorithms
+** Piazza - https://piazza.com/class/lko2z1ykmvr7ok
+
+[Look at the CS202 Piazza and Canvas for updates]
+
+** TODO Look at Lab 0 that is due on September 7
+    SCHEDULED:<2023-07-07 23:59>
+** TODO Watch the Video Dr. Gregor made for Tuesday.
+
+
+* ECE 255 TODO List
+** Instructor: Dr. Sun - jysun@utk.edu
+** TAs:
+Kishan: Tues. & Thurs @ 11:15 - 12:15 in MKB 224
+    Email: kpatel78@vols.utk.edu
+Ben Clark: Wed. 3:00 - 4:00, Fri. 10:15 - 11:15
+    Email: bclark49@vols.utk.edu
+** Location: MKB 404 For Lectures and Lab I think?
+** Textbook:
+Charles H. Roth, Jr. and Larry L. Kinney, Fundamentals of Logic Design, Enhanced 7th
+Edition, Cengage Learning, 2019. (ISBN 978-1-337-62035-2)
+** Canvas: https://utk.instructure.com/courses/180713
+
+[Refer to Canvas and TAs for questions]
+
+** TODO Download VIvado 2020.2, Basys 3, Logism, and digilent -> WILL NEED A WINDOWS LAPTOP
+** TODO Homework 1 SCHEDULED:<2023-09-01 23:59>
+** TODO Reread the notes for this class
+
+
+* MATH 241 TODO List
+** Instructors: Dr. Fowler and Dr. Berry
+** Location: MKB 622 for Lectures, ZEC 377 for Quiz
+Note that Tuesdays are also classes but they are videos.
+** Textbook: Advanced Enginering Mathematics
+https://bookshelf.vitalsource.com/#/
+** Piazza -  https://piazza.com/class/lkwot5fl6ro6qx/live
+
+[Refer to our Canvas and Piazza for updates]
+
+** TODO Cengage 7.3
+** Read Chapters 7.4 and 7.5 in the Textbook.

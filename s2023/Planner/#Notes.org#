@@ -1,0 +1,105 @@
+#+TITLE: Isaac's Planner
+#+AUTHOR: Isaac Abella
+#+DESCRIPTION: Org file to use for classes in College
+
+#+NOTE: For these summer classes just assume that things are due at midnight unless specified otherwise
+
+* General Planner:
+* FOR PRE-COLLEGE COUNSELOR JOB:
+** TODO: Pre-college counselor training Session
+#+LOCATION: Geier Hall
+SCHEDULED:<2023-07-05 12:00>
+**** TODO: Same day, we have a pre-college counselor dinner
+#+LOCATION: Calhouns on the river
+SCHEDULED:<2023-07-05 17:00>
+** TODO: Pre-college counselor training Session
+#+LOCATION: Zeanah 370
+SCHEDULED:<2023-07-06 14:00>
+**** TODO: Same day, we have a pre-college counselor dinner
+#+LOCATION: Cracker Barrel, probably off merchants drive.
+SCHEDULED:<2023-07-06 16:30>
+** TODO: Pre-college counselor training Session
+#+LOCATION: Zeanah 370/378
+SCHEDULED:<2023-07-07 14:00>
+**** TODO: Same day, we have a pre-college counselor dinner
+#+LOCATION: CARABARRA'S catering will come to zeanah 370/378.
+SCHEDULED:<2023-07-07 16:30>
+*** DONE Meeting with Dr. Skutnik over zoom.
+* Class Info:
+** Physics 2110: Calculus based Physics I
+Info: Dr. Farvin, Pellissippi
+Note: All Work is done online, don't need to be on campus unless needed.
+#+TEXTBOOK: University Physics and something else :)
+** Calculus 1920: Calculus II: Integral Calculus
+Info: Dr. Lamb, Pellissippi
+This class requires me to be on the main campus to test
+Check Achieves Webpage to see assignment
+#+TEXTBOOK: Early Transcendatals 3rd Edition, I have the 4th Edition
+* PHYSICS AGENDA
+** Course Schedule and Things to be doing
+*** TODO: Test 6: Chapter 31 + 32
+SCHEDULED:<2023-06-26 23:49>
+After Test 6: You should Study 33
+*** DONE TODO: Lab 7: Electromagnetic Induction
+SCHEDULED:<2023-06-24 23:59>
+*** TODO: Test 7: Chapter 33
+SCHEDULED:<2023-07-01 23:59>
+After Test 7, you Should Study Chapter 24 on Gauss's Law
+#+NOTE: You will be going back in chapters for this part of the class
+*** TODO: Lab 8: The Electric Oscillator
+SCHEDULED:<2023-06-29 23:59>
+*** TODO: Test 8: Chapter 24
+SCHEDULED:<2023-07-07 23:59>
+After Test 8, you Should Study Chapter 34
+#+NOTE: There is no lab that is due at the time before the test!
+*** TODO: Test 9: Chapter 34
+SCHEDULED:<2023-07-12 23:59>
+After Test 9, Go back and study Chapter 22 + 23 Level II
+*** TODO: Lab 9: The Joule Heat
+SCHEDULED:<2023-07-10 23:59>
+*** TODO: Test 10: Chapter 22 + 23 Level II
+SCHEDULED:<2023-07-18 23:59>
+After Test 10, Study for Chapter 29 + 30 Level II
+*** TODO: Lab 10: The internal Resistance of a Battery
+SCHEDULED:<2023-07-15 23:59>
+*** TODO: Test 11: Chapter 29 + 30 Level II
+SCHEDULED:<2023-07-22 23:59>
+After Test 11, Study for the Final Exam!
+We made it this far!!!
+******* #+NOTE: We have NO MORE LABS!!!
+*** TODO: FINAL EXAM!
+ #+NOTE: We will not be able to take the exam at this date. I will have to take a W, and then go back to pellissippi in October to test for it.
+SCHEDULED:<2023-07-25 23:59>
+Best of luck! I'm proud that we made it this far man!
+* CALCULUS AGENDA
+** Course Schedule and Things to be doing
+*** Need to pay attention to 7.1 - 7.7
+*** The goal for this week is to actually finish all of the assignments before the second week when the tests get dropped off to the centers
+*** TODO I need to look at my mistakes for calclus II exam II.
+**** I need to do a heavier reflection on what happens with my exams and why this class is so difficult.
+
+
+* ROAMING NOTES
+** TODO Learn how to use anki and spaced repition
+*** I want to be able to use srr for things like calculus and physics, which I guess I'll need to learn hwo to do because it doesn't seem very intuitive at the moment.
+** TODO Learn how to use Latex or other math writing software with emacs in order to get better and more efficent notes.
+*** Right not it doesn't really matter since I have a notebook and engineering paperm, but it might come back later to confuse me if I try to read my org notes.
+** TODO Clean up syncthing folders that are shared currently with my desktop, linux/mac laptops.
+*** I have a lot of empty folders and repeat folders, and I have obselete folders such as my m1 org agenda.
+*** I should also condense my class folders and maybe save them even further into an external hard drive.
+    #+NOTE: this shouldn't matter as much for now because most of my systems outside of the endeavor laptop have high storages.
+** DONE Look over macbook m1 ORG planner and macbook arch planner and decide which one to use.
+*** After looking closer, I decided to just use my arch linux setup and then share it through syncthing.
+** DONE Add this org file over to my syncthing profile in order to see it on desktop and macbook
+** DONE get doom emacs set up on pc, either that or start looking into the dual boot option
+** TODO Cold call departments about undergraduate research. This summer.
+*** I've talked to a few professors already:
+- Dr. Berry, Dr. Qi, Dr. Aziz, and I think two more so far.
+- Dr. Berry referred me to ICL lab, the otehrs have not responded yet.
+- Need to talk to Dr. Knight for more networking and dad to see if anyone in DeRoyal or Denzo can take me.
+    - To that point, I should look more into DeRoyal and Denzo since they are close to home.
+#+Note: I I can probably do a much better job in writing my emails, I should probably send a universal version over to either Hank or sis and have them review and see if its too formal or too casual.
+
+
+
+#+NOTE: I want to give org mode online note taking a try, but I will need the new ssd config to have emacs set up on my sharing ssd, will probably have to do a raid configuration and get rid of my old recovering or I will have to put that recovery on a flash boot drive.

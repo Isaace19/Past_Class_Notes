@@ -1,0 +1,9 @@
+#+TITLE: Roaming Notes
+#+AUTHOR: Isaac Abella
+#+DESCRIPTION: Used for thoughts and notes that don't go into my planner at all. Will probably resort later or just mark out, but these are just plain text notes.
+
+#+REMINDER: The C-c C-x C-a command string will add a subtree to the org archive, which means you can view it individaully, but it takes it out of the tree root that you made the note in so be careful!
+
+Things that I need to do.
+1. Review how taking notes on emacs felt with physics
+2. Cold Emailing professors for work.

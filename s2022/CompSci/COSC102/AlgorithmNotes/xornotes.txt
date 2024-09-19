@@ -1,0 +1,110 @@
+XOR cont...
+
+x^y =2 
+2^y = X
+
+ob0110_0011 -> x
+ob0111_0110 -> y "stream cipher"
+------------
+ob0001_0101 -> z -> obtain secret code
+ob0111_0110 -> y -> use the key to unlock teh message
+------------
+ob0110_0011 -> x = message
+
+Know this concept for midterm 2 examples
+
+************
+
+bitmasking 
+
+int = 32 bits, 4 bytes
+
+short -> 1/2 the size of an intwith shorts and ints, +/-
+
+when we have a negative number, 1 bit will hold the sign and the 0 or a 1 will tell
+us if it's a positive or negative number. While the other 31 bits hold the magnitude of the number.
+
+no sign
+the "u" means that it's unsigned
+    Uint8 -> unsigned integer with 8 bits
+    Uint16 -> 16 bits
+    Uint32 -> 32 bits
+
+uint8 -> 8 bits, all 8 bits hold magnitude
+sensor data: store hr, power, G/C, pulse ox, BP (all examples of things that can be stored)
+    list of 5+ bluetooth devices
+    could write a bool for each one
+    1 byte for each; 4 bytes in some other languages.
+    for c++ it's 1 byte
+
+Embedidded devices
+    holds all data as SMALL AS POSSIBLE
+    int8 -> holds all the data in teh single int Uint8
+
+    test   is it connected?
+    set    all testing bits
+    clear   disconnected
+
+Lab Implementation:
+
+doing the data sensor on, off, and test case 
+
+- - -  -  -   -  -  - 
+    BP P.O S/C P HR
+        
+        we can do tis with bit shifting: example -> number << 2 this moves all the bits by 2 places.
+
+        we can shift the bits of all the devices
+        HR 1 << 0 --- 00000001
+        P  1 << 1 --- 00000010
+        S/c  1 << 2 --- 000000100
+        P.O. 1 << 3 --- 00001000
+        B.P. 1 << 4 --- 00010000
+
+    determine how to test bit
+
+    if sensor data is 24 - determine if the bit is turned on or off
+    if on, than we have to have a 1 to be true
+    if off, then we have to have all 0 to be false
+
+    wants a returned input that is all zeros so we can just use a 0
+
+    IMPLEMENTATION:
+    uint8 test_bit(sesnorType index)
+    { 
+        // pass in two for Speed/Cadence
+        uint8 mask = (1 << index);
+
+        sensorData &mask
+        return answer;
+    }
+
+    void SetBit (SensorType index)
+    {
+        // SetBit turns the sensor on; test bit tests the connection of the bits
+        // connect to the devices
+
+        /* lets use 17 as the sensor data; we will create a mask with power
+
+    }
+
+    void ClearBit(SensorType index)
+    {
+        // Disconnect the given sensor: turns it off
+    }
+
+    ~mask with sensorData &
+    ClearBit - > we use ~mask & number
+    19 -> 00010011 we have blood pressure, power, and the heart rate on. mask power(000000010)
+    ~mask & 00010011    - > sesnorData
+            11111101    - > ~mask
+    ----------------
+            00010001 sensorData
+
+Calling in main 
+    obj myWatch.set_bit(HR) // you can typdef to number 
+
+    // HR,P,SC, PO, BP
+       1  2  3   4  5
+       The design will be very human
+

@@ -1,0 +1,55 @@
+/*
+
+void LinkedList::push_front(const int &data)
+{
+    /*
+    Implement a push to the front function. We make a temp value that attempts to
+    fill the head node, we set the temp to the previous head node and then
+    increase the node count
+    */
+Node *temp = new Node(data);
+temp->next = head;
+head = temp;
+
+if (tail == nullptr)
+{
+    tail = head; // if list was empty, then our tail can be the new node;
+}
+N++;
+}
+
+void LinkedList::pop_front()
+{
+    /*
+    Implement a pop function to delete the front of the list. We will have
+    to set the head to the next node before deleting all the data, then decrementing
+    the node count.
+    */
+
+    if (head == nullptr)
+        return;
+
+    Node *temp = head;
+    head = head->next;
+
+    if (head == nullptr)
+        tail = nullptr;
+
+    if (temp == tail)
+        tail = nullptr;
+
+    delete temp;
+    N--;
+}
+
+// fix the front and back display calls.
+
+const int &LinkedList::front()
+{
+    std::cout << "Printing out the head node...   \n";
+    return head->data;
+    if (head == nullptr) // assuming the head is nullptr and there is no list
+        throw std::runtime_error("Empty list\n");
+}
+
+* /

@@ -1,0 +1,46 @@
+#+Title: Vigenere.cpp Lab
+
+* TODO Understand the Lab note
+
+The basic gist of the code that I understand so far is that the code will take input from the user putting in
+an input and output txt files into the command line, with the key already defined in the vigenere function inside the main file.
+
+* What is the Vigenere code starting from the top down?
+
+*** FIRST I think that the first thing is to understand a vigenere cipher
+    - It's a simple algorithm that takes the ceaser cipher as it's first foundation to actually running
+     the reason that that is important is because if you can handle the ceaser cipher, you should understand
+     the reason that we have to use a char vTable
+    
+    when in c++ we declare the char vTabel[26][26], why is that? well recall that the alphabet is 26 letters (duh)
+    but this allows use to have a new added complexity. It adds a whole new range of ciphering combinations the reason
+    that the ceaser cipher was such an easy cipher to break was because it is monoalphabetic, meaing that you can only switch the letters in one way, shifting them
+    and them forcing the remaining pushed alphabet letters down and to the front of what you just shifted.
+
+    - So now we basically ahve to understand that you wanted to avoid the chance of someone just brute forcing your cipher you can add another layer of alphabets to act 
+     as your columns to the first layer of rows [26][26] henece the double array.
+     This is known as a polyalhabetic algoirthm. and now when we shift the cipher, we are not only just shifting in the x rows, but as well in the y columns
+
+*** What am I seeing when I look at this code? 
+    - well essentially you are looking at the class VigenereCipher because VigenereCipher is not something built in to c++
+     so we can bascially create our own class with defined functions of user defined types, this is because nothing in c++ naturally has what we want this program to do.
+
+     In our class we can define things such a user defined functions and data member functions and then we can access thse with the . operator and use pointers as normal 
+     think of class as a namepsace for it's own members, and the public members that we private and the private members will provide all the details you need.
+     and inside of our class of vignere class 
+
+*** inside of Vigenere
+    - If you can think back to some of the times I brushed up on 'struct' you would remember that one thing about structs is that you can only encapsulate data as a public variable 
+     however if you were to use a class you can define those public and privavte variables granted that you use proper syntax.
+
+     so why do we want a private function? well because we don't want a non member function to mess with it, just like how we wouldn't want the key or the input and output files to be 
+     manipulated by anything other than the keystream, encrypt, and decyrpt functions that we made or used from the template 
+
+     we can also avoid bad input and illegal values into the code because the member function is protected. this helpsget rid of one stage of debugging
+
+     another rason that having the protection of data via private is because it will be easy for people to know how the code works just by looking at the definitions of the code and how to properly use that class 
+
+     * just note that you can manipulate private data using the init() function and putting something inside of the parentheses if you needed.
+
+*** More about classes and functions that we write, want to master before stepping into our functions 
+    - Classes are priavet by default

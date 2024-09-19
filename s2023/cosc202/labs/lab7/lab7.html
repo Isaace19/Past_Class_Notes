@@ -1,0 +1,344 @@
+<title> CS202 -- Lab Assignment 7</title>
+
+<h1> CS202 -- Lab Assignment 7 (150+25 pts: Fall 2023)</h1>
+
+<hr>
+<h3>Getting motivated</h3>
+
+In this lab, you will gain familiarity with the binary search tree
+data structure and the iterator abstraction. The first is a core data
+structure. The latter is a core C++/STL concept.
+<p>
+
+<hr>
+<h3>Lab submission and due date</h3>
+The bst.h file is due 11.59pm Thursday Nov 16, 2023.
+Do not submit any cpp files. Your task is to update the binary search tree
+template code which goes in the bst.h header file. 
+The code must compile using the given makefile.
+<p>
+
+<hr>
+<h3>Programs you need to write </h3>
+
+Write the following code. Start early as the assignment
+may be more difficult than you first think.
+Base your code on the bst1 handout, which uses left and right
+pointers, not the bst2 handout, which uses a link array of 
+pointers.</b>
+
+<UL>
+<LI>
+Get a copy of lab7.tar from Canvas.
+This file contains a file called Prog7.cpp,
+which works as provided, a skeleton bst.h file called bst.txt 
+which you must complete the implementation of, and
+a makefile for compiling the program into an executable.
+In addition, you are given a solution executable called sprog7,
+and some test data.
+The executable showcases the functionality described next.
+When in doubt about what to do, run the solution 
+executables and study the output.
+Make sure your program works on data other than the test files
+given to you.
+<p>
+
+<LI> 
+The main program takes two required command line options that specify the mode and the data used as well as an optional verbose option. Execution examples are as follows:
+
+<pre>
+unix> ./Prog7 
+usage: ./Prog7 -1|2|3|4 [-verbose] data.txt
+unix> cat ../test_char.txt
+H
+W
+B
+E
+T
+F
+
+unix> ./prog7 -1 ../test_char.txt
+  0   H : ROOT  L=  2 R=  1
+  2   B : P=  0       R=  3
+  1   W : P=  0 L=  4
+  3   E : P=  2       R=  5
+  4   T : P=  1
+  5   F : P=  3
+
+unix> ./prog7 -2 ../test_char.txt
+   B   E   F   H   T   W
+
+unix> ./prog7 -3 -verbose ../test_char.txt
+   B   E   F   H   T   W
+
+Print [key0:key1] A O
+*** lower bound B
+*** upper bound T
+   B   E   F   H
+
+Print [key0:key1] K X
+*** lower bound T
+*** upper bound NA
+   T   W
+
+Print [key0:key1] ^D
+
+unix> ./prog7 -4 -verbose ../test_char.txt
+   W   T   H   F   E   B
+
+Print [key0:key1] A O
+*** lower bound B
+*** upper bound T
+   H   F   E   B
+
+Print [key0:key1] K X
+*** lower bound T
+*** upper bound NA
+   W   T
+
+Print [key0:key1] ^D
+</pre>
+
+Mode 1 executes a level-by-level traversal and prints the node labels to stdout. 
+Mode 2 executes an inorder traversal and prints the node labels to stdout using 
+a forward iterator loop (operator++()).
+Mode 3 repeats Mode 2 before entering an interactive loop that prints user
+defined ranges of the data. Printing of the data is based on the same forward
+iterator loop used in Mode 2.
+Mode 4 is similar to Mode 2 but prints everything in reverse. This is based
+a reverse iterator loop (operator--()). The verbose option is silently ignored
+for Modes 1 and 2 and only takes effect for Modes 3 and 4.
+<p>
+
+NOTE: The level-by-level printout uses node IDs to identify parents nodes
+and subtrees. That is, the root node has ID=0 and label=H. The left child has
+ID=2 and label=B while the right child has ID=1 and label=W. Both children
+have P=0 meaning the root node. The solution executable can only process
+integer data as compiled.
+<p>
+
+Extra credit: Mode 4 is extra credit. If you succesfully implement Mode 2, then
+you should not have much trouble implementing Mode 4.
+
+<p>
+
+<LI>
+For 30 points,
+complete the bst.h file needed to compile and run Mode 1 of the 
+program. Here is what that entails.
+<p>
+
+Copy bst.txt to bst.h. Strip out comments as well as code not needed 
+like the iterator subclass and undefined bst member functions.
+Add a node ID (int) and a parent pointer (node *) 
+to the bst::node subclass.
+Define and implement the bst::node() constructor.
+Have the constructor take a node ID argument which is set
+to 0 if absent, and use this argument to initialize the node ID.
+Set the parent pointer to NULL.
+<p>
+
+The node ID is a unique integer assigned to nodes as they
+are created. Add a node ID to the bst class which is initialized to 0
+in the bst constructor and updated everytime a new node is added to 
+the binary search tree. Update bst::insert() to do the
+latter and to pass the updated value along to the bst::node
+constructor.
+<p>
+
+With respect to the parent pointer (or link),
+be aware that bst::insert() is a recursive function which
+does not have access to the parent when processing a node. 
+You must therefore set the parent pointer as you ascend out 
+of the recursion (when you reach the parent, you have access to the 
+root of the subtree just processed).
+<p>
+
+Update bst::node::print() to output the node ID, its key,
+the parent ID, and the left and right subtree IDs (if they exist).
+See an integer output example below. 
+
+<p>
+Add a specialized version of bst::node::print() for string data. 
+Make the key width 20. Temporarily modify Prog7.cpp to read string data,
+then process test_string.txt and make sure you understand the output
+produced by Modes 1 and 2. Then switch back to integer processing.
+<p>
+
+<LI>
+For 80 points,
+update bst.h compile and run Mode 2 of the program.
+A quick look should convince you that this is a matter
+of adding an iterator subclass to the bst class. Here
+is how you do that.
+<p>
+
+Add public member functions bst::begin() and bst::end()
+which respectively return an iterator that points to the node 
+which holds the smallest key and an iterator that contains
+a NULL pointer which indicates the binary
+search tree has been exhausted (analogous to the first node
+and the end of a single-linked list).
+Recall that the smallest key is found in the leftmost node. You
+must find it by <i>iteratively</i> searching thru the sequence of
+left children starting at the root of the tree. 
+<p>
+
+The bst.txt file lists a number of iterator operators 
+that must be included, namely:
+++ PRE increment for an inorder move to the next node,
+* for dereferencing and thus accessing the node key,
+== and != for comparing iterators.
+Base your code for these operators
+on the list::iterator code covered in class.
+This might be a good time
+to read and understand the corresponding class notes 
+and code handout which both are available on Canvas.
+<p>
+
+The ++ PRE increment operator is by far the most complicated
+code you will write in this lab assignment.
+Before you even think about programming it, make sure you
+know how to carry out an inorder traversal with focus on
+how to advance from one node to the next. Be aware that
+you will NOT be using recursion. Each call to 
+bst::iterator::operator++ must explicitly update the 
+underlying node pointer to the next node.
+<p>
+
+Hint:
+The bst::begin() function should the node pointer to the
+leftmost node in the binary search tree. The next node
+is the parent thereof. The next node after that is the 
+leftmost node in the parent's right subtree (if it has any).
+You then return to that node's parent before you process
+it's right subtree. Eventually, you return to the root
+of the tree whereafter you descend into the main
+right subtree. See the pattern?
+Be very careful when you ascend out of the tree when
+the last node has been processed. You must
+detect and handle an attempt to access the parent of the 
+root node since it doesn't exist.
+If you forget to this, your code will seg fault. Guaranteed.
+<p>
+
+When the bst::iterator subclass has been implemented, 
+the print_inorder() function in Prog7.cpp will output
+the content of the binary search tree in lexicographically 
+sorted order as shown above. Make
+sure your code produces a comparable result for the 
+test_string.txt data.
+<p>
+
+<LI>
+For 40 points, modify bst.h to compile and run Mode 3
+of the program. 
+A quick look should convince you that this is a matter
+of adding two public member functions to the bst class,
+namely, bst::lower_bound() and bst::upper_bound()
+which both take a key as input and return an iterator
+corresponding to node in the binary search tree.
+Here is how these functions are supposed to work.
+<p>
+
+The bst::lower_bound(key) function returns an iterator to the
+first node in the binary search tree whose key is not less
+than the given key, i.e., key &le; lower_bound.
+If the key exists, the returned iterator points to that node.
+If the key does not exist, the returned iterator points to 
+the first node whose key value is greater. 
+Your search must be based on explicitly
+traversing the appropriate path from the root to the target
+node. Do not use an iterator based inorder traversal.
+<p>
+
+The bst::upper_bound() function returns an iterator to the
+first node in the binary search tree whose key is strictly
+greater than the given key, i.e., key &lt; upper_bound.
+If the key exists, the returned iterator points to the next 
+node when performing an inorder traversal.
+If the max key does not exist, the returned 
+iterator should represent a NULL pointer.
+Your search must be based on explicitly
+traversing the appropriate path from the root to the target
+node. Again, do not use an iterator based inorder traversal.
+<p>
+
+Hint: bst::lower_bound() and bst::upper_bound() are nearly
+identical; their only difference is wrt the comparison operator
+used.
+<p>
+
+The iterators returned from bst::lower_bound() and
+bst::upper_bound() are passed to print_inorder() 
+which outputs the corresponding sequence of
+data stored in the binary search tree.
+See an example above.
+<p>
+
+<LI>
+For 25 extra points, modify bst.h to compile and run Mode 4
+program. 
+A quick look should convince you that this is a matter
+of updating the iterator subclass. Here
+is how you do that.
+<p>
+
+<p>
+Add public member functions bst::rbegin() and bst::rend()
+which respectively return an iterator that points to the node 
+which holds the largest key and an iterator that contains
+a NULL pointer which indicates the binary
+search tree has been exhausted.
+Recall that the largest key is found in the rightmost node. You
+must find it by <i>iteratively</i> searching thru the sequence of
+right children starting at the root of the tree. 
+<p>
+
+Add PRE decrement operator -- for an inorder move to the 
+previous node. If you understand how the forward operator works,
+then it should be easy for you convert a copy thereof to produce
+the needed reverse operator. See above for example output.
+<p>
+
+</UL>
+
+<hr>
+
+<h3>Grade Rubric</h3>
+<p>
+See previous lab assignments for notes on general expectations.
+
+<h4>Prog7 (150+25 points)</h4>
+
+<h4>Mode 1 (30 points)</h4>
+<pre>
+*20: Definition and use of bst::node ID information
+*00: Specialized string version of bst::node::print()
+*10: Correct output
+</pre>
+
+<h4>Mode 2 (80 points)</h4>
+<pre>
+*10: Definition of bst::iterator subclass
+*10: Implementation of constructors, operators <tt>*, ==, !=</tt>
+*30: Implementation of operator++() 
+*10: Implementation of bst::begin() and bst::end()
+*20: Correct output
+</pre>
+
+<h4>Mode 3 (40 points)</h4>
+<pre>
+*15: Implementation of bst::lower_bound() member function
+*15: Implementation of bst::upper_bound() member function
+*10: Correct output
+</pre>
+
+<h4>Mode 4 (25 extra points)</h4>
+<pre>
+*15: Implementation of operator--() 
+*10: Correct output
+</pre>
+
+<hr>
+Tue Nov  7 18:41:09 EST 2023

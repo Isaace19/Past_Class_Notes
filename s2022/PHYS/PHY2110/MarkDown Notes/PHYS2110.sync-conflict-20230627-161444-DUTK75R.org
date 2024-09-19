@@ -1,0 +1,187 @@
+* Calulus Based Physics I - Electromagnetism
+#+Author: Isaac Abella
+
+#+Note: This is for class notes as an experiment to see if online virtual notes can be useful with org mode.
+    #+Note: There can't be image inserts in emacs org mode without it taking some time, so I probably will refer to my notebook in order to have images of circuits and other diagrams/concepts.
+
+* Chapter 31 + 31 Electromagnetic Induction
+#+DATE: <2023-06-25>
+
+#+NOTE: use this in conjunction with our computation notebook, which has better images and diagrams, as well as the equations with actual mathematical symbols. This is especiall true for The derivation of V = VmaxSin(wt) transformers because I drew the diagram and actual equation
+
+
+
+** Magnetic Induction
+    + When a charge moving at velocity V crosses a magnetic field lines of intensity B, it experiences a force F perpendicular to the plane that contains V and B. This was discussed in Chapter 21 and can be shown by flowing a current through a straight wire that is palced inside the field of a horseshoe magnet.
+    + When we set up a small current inside of a horseshoe magnet, then we can observe two states: one when the Key K is open, making no current flow through th eloop, and when K is closed, and current I is able to flow into the loop.
+        + When the key is opened, no current can flow inside of the loop, which means that there is no force on the wire segment in the magnetic field.
+        + When the key is close, it allows current I to flow into the loop (charges move at the same velocity V), and therefore, force F is exerted on the wire segment in the magnetic field B.
+
+
+    + The reverse is also possible, for if you remove the battery when the circuit is closed, then nothing would happen, but if that loop is pushed forward with the force of F, or is swung forward, an electric current I can develop. This is verified with the use of an ammeter in the loop.
+
+    + What can be concluded is that when an electric current flows in a wire in a magnetic field, the field exerts a force on the wire and causes motion (electric motor), and when a wire or a loop is moved mechanically in a magnetic field, the the current develops a loop (electric generator).
+        + This is the basis for electric motors and generators, and to understand it better in theory, then we need to understand the concept of MAGNETIC FLUX.
+** Magnetic Flux
+*** A good analogy for magnetic flux, explained with rain!
++ If you hold a ring horizontally udner rain, the maximum number of rain drops pass through it.
++ But, if you were to hold the ring straight up vertically, then no rain would pass into the rng.
++ Holding the ring at some certain angle, the rains drops can pass through, but not the maximum amount as if you were holding the ring straight horizontally.
+
++ To show the orientation of the ring in space, it is better to use teh angle that is normal with the vertical direction. IN this case, normal to the ring means that the line is perpendicular to the ring's plane. in each case, the flux of rain through the ring is differnt.
+
+  (A diagram explaining this can be referenced back to the online notes, downloaded version, or on my notebook.)
+**** Note: Magnetic field lines may also be viewed as rain lines if we are talking abouta  downward magnetic field. The heavier the downpour, then the stronger the magnetic field B must be.
+
+*** Magnetic Flux Through a Surface:
+    + The magnetic flux phi of a magnetic field B through a loop of surface A whose normal N makes an angle theta with the field lines, is defined as Phi = BAcos(Theta).
+
+      So what does this mean?
+
+      Magnetic Flux is known as symbol "Phi", and the SI unit for magnetic flux is Tm^2. Called a weber. For a coil of wire that has N loops, teh total flux is:
+
+                            + Phi = NBAcos*(Theta)
+
+** Faraday's Law of Magnetic Induction
+   + When a coil of wire is moved toward on pole of a magnet or away from it, a current is induced in the coil. This current can be measured by using a sensitive ammeter.
+   + To generate electric current in a coil, the magnetic flux through the loops must experience a change. Faraday showed that the voltage generated across the terminals of a coil is directly proportional to the change in magnetic flux ((change in flux)), AND inversely proportional to the time interval delta t within which the flux change occurs. He came up with teh following formula:
+
+**** NOTE: I don't really have Latex knowledge just yet to make proper math symbols, so reference my exam cheat sheets and my notebook computations to see the actual formulas and examples.
+                        E = -(Change in magnetic flux) / (Change in time)
+                        This is Faraday's Law of Magnetic Induction.
+
+   + In Faraday's Formula, v is the induced volage, or the electromotive force (emf) generated in the coil. delta phi is the change in the magnetic flux, and the delta t is the change in time.
+
+   + In SI, it is easy to show that V has the unit of volt as is expected. the (-) in the front of the equation indicates that the direction of the induced voltage opposes the direction of change in the flux that causes it. This will be discussed under Lenz's Law later.
+** Lenz's Law:
+***  I think that my lab 7: Electromagnetic Induction has a good explanation for real application of Lenz's law, so if these notes confuse me in the future, just go to libre and open the lab report 7.
+    + When the North Pole of a bar magnet is pushed toward a coil, it induces a current in the coil. This current in the coil will then magnetize the coil. The direction of the induced current is such taht the end of the ciol that is ebing approached by that N-Pole becomes an N-Pole itself to oppose the approaching N-pole.
+
+    + Then, if the N-Pole is moved away from the coil, the coil will get magnetzied again, but this time the end of it that is near to the N-pole that is receding away will become an S-Pole, and begin to oppose the N-Pole going away.
+
+***** Similarly:
+    + When the S-pole of a bar magnet is pushed toward a coil, it will induce a current in the coil, then that current in the coil gets magnetized, and polarized. So the direction of teh incued current is such that the end of the coil being approached by the S-pole becomes an S-Pole itself to oppose the approach of this new S-Pole
+
+    + And similarly again, when the S-Pole is moved away from the coil, the end of the coil that is closest to the receding S-pole will become an N-Pole in order to oppose the going away of the bar magnet's S-Pole. The following figures inside our computation notebook will show the polarizataion of the coil in both cases.
+******** VIDEO on LENZ'S LAW: https://www.youtube.com/watch?v=sENgdSF8ppA
+** Inductors:
+    + An inductor is a coil of wire. And we have already learned that any current carrying coil has magnetic properties. in fact, an inductor is a device that stores magnetic energy.
+
+****** Inductors Resist or Respond to Current Changes:
+    Any time the current in an inductor is set to change, the inductor resists that cange by developing an opposing voltage.
+
+    As soon as that coil is connected to a battery, the current in the circuit changes from 0 to I by an amount Delta I (Change in Current). the current change in  delta I causes a change in delta B that cuases the flux change Delta Phi.
+
+    Then that change in the magnetic flux causes a voltage to develop across the coil other than the battery voltage.
+
+    The developed voltage has an opposite polarity compared to the battery voltage (Lenz's Law).
+
+    Experiments show that the shorter the connection time Delta T, the greater the developed opposing voltage there is across the coil. We can show this change in applied current per unit of time as change in current divided by the change in time, and the opposing voltage that the inductor develops as VL.
+
+********* Look to computation notebook to see what this means with proper symbols.
+
+
+******* What Does this mean?
+    L is the "self-inductance" of an inductor is the proportionality constant. L depends on the physical characteristics of the inductor. L actually depends on teh number of loops per meter of the inductor n, its length l, its loop cross sectional area A, and Uo. The formula for self inductance L is in the computation notebook.
+
+********** L = Uo* n^2 * A * l. The SI unit for self inductance L is called ohm-second, called "Henry". The Uo in this case is 4pi x 10^-7 Tm/A, which we can recall as the permeability of a vaccuum for magnetic field transmission.
+
+********** To Summarize, when the current varies from O to I, the indcutor will develop an opposing voltage to resist that new change, this can be seen in a diagram in our notebook and online notes.
+
+
+******* More about Self Inducatance:
+    The opposing voltage that id developed by the battery does not last longer than the connection time. The connection time is a very small fraction of a second.
+
+    As soon as the current int he inductor can stablize and does not change with time, the opposing oltage that was there to resist the change now drops to zero and th eindcutor behaves as if it does not exist.
+
+    This is simply because inductors themselves have small "ohmic" resistances and do not cause significant voltage drops in the circuits.
+        It is for this reason that inductors can be used as short circuits for non-varying currents.
+
+********* IN BRIEF:
+    The opposing voltage that an inductor develops is proportional to L and the time rate of change of current: Delta I divided by Delta T (The change in current divided by the change in time)
+
+** The Magnetic Energy Stored in an Inductor:
+Since power is energy over time; therefore, energy is power times time, or Um = Pt. Within the time interval dt that the current through inductor changes by dI, the magnetic energy that gets stored in it is dUm = Pdt. (*)
+
+Power P is also given by P = VI and since the voltage that an inductor develops is VL = L (dI/dT),
+
+then we can say that the inductor power becomes: P = I L (dI/dt). Substituting this P in (*) results in:
+
+******* dUm = I L (dI/dt)dt         or          dUm = L IdI  or:
+******* The integral of dUm = L the integral of IdI        Um = (1/2)LI^2+C (**)
+
+*** For no curent through the inductor, that is I = 0, then no magnetic energy is stored in it; thus, when I = 0, Um = 0 as well.
+    Appling this condition to (**) sets up equations makes the C constant C = 0. Finally, the magnetic energy stored in an inductor is gien as:
+
+    Um = (1/2)LI^2
+** Alternating Current:
+When a rectangular loop of wire is spun in a uniform magnetic field, the developed current in the loop moves back and forth in a push-pull manner. The result is called the "alternating current" because the direction of the current will keep alternating or reversing with time.
+
+
+At a constant angular speed omega W, the way current in the spinning coil changes with time is called a "sinusodial function fo time".
+    This means that its mathematical equation is either a sine or cosin wave function of time. The following figures inside our computation figures shows these variations.
+
+*** So What's the explanation for this?
++ Well, suppose that the loop starts CCW from a vertical position with its normal to the loop n pointing horizontally to the left. At the start of rotation, the angle that N makes with B is theta = 90 degrees.
++ At this inital vertical position, the magnetic flux through the loop is zero because cos90 = 0. But as the loop turns CCW to the horizontal position, the normal to the loop (vector N) becomes vertically downward where its angle with B will be (theta = 0 degrees).
++ The Flux through the loop becomes maximum (cos0 = 1). Past 90 degrees, the horizontal loop rotates to become vertical again at Theta = 180 degrees.
++ Going past 180 degrees, the loop's orientation reverses casuing current I to change the direction. Past 180 degrees, the normal to the loop N starts becoming upward and the opposite to B resulting in negative flux. this makes the loop current change direction, resulting in an alternating current that changse direction every half turn with an equation of the form:
+************* V = VmaxSin(angular momentum x time)
+
+** The Derivation of V = VmaxSin(angular momentum x time)
+    The voltage generation is the result of the flux change dPhi m through the loops of a coil during time interval dt. Applying faraday's law:
+
+    V = -dPhi m / dt where phi = NBAcosTHETA and THETA = angular momentum x time, we get:
+
+    V = -d[NBAcoswt]/dt = NBA w sinwt or,
+
+******** V = NBAwSin(wt) We can write this as V = VmaxSin(wt) where Vmax = NBAwSin
+******** Please keep in mind here that w = angular momentum, its the cloest I got to the omega symbol at the moment before I integrate the Latex repo.
+    #+NOTE: d/dt{cos(wt)} = -wsin(wt). The factor NBAw is a constant and is nothing but the maximum voltage, hence the naming "Vmax".
+
+
+*** Question: In V = NBAw sin(wt), what would you come up with if you try to find the maximum value of V? Of course, you know that N, B, A, and w are constants for a certain generator. The only variable is sin(wt). How do you determine the maximum value of V if NBAw is constant?
+** Mean Voltage, Mean current, and Mean Power
+ + Both voltage and current in AC sources are sinusoidal. We may calculate a mean value for each in one cycle.
+ + As you know, a sine function is positive in 1/2 cycle and engative in the next half cycle.
+    + The mean value in each cycle is mathematically zero.
+
+ + Mathematically, the negative half completely cancels the positive half. Of course, ZERO does not reflect the actual value. We know that the overall voltage, current, and power can't be zero.
+    + One method that we can use to calculate the actual mean value for voltage, for example, is to first square its values in each segment, then find the mean value of the squares, and finally take the square root of that mean value.
+    + This way, by squaring, there won't be any negatives to result in a zero mean value. This method is called "Root Mean Squaring" and such value is called the "root mean square (rms)".
+
+
+ When observing sinusodial graphs of current and voltage, with each shown for two full cycles, their product, and power remains positive. Even with half of the cycle being both negative and positive.
+    + When we use calculus, it is easy to show that the RMS power is 1/2 of maximum power.
+
+****** Prms = (1/2)Pmax (1)
+
+The proof will follow after using this Prms to come up with relations for Vrms and irms.
+
+The factor of "1/2" in equation (1) can be written as:
+****** 1/2 = 1/sqrt(2) * 1/sqrt(2) = (0.707)(0.0707)
+
+And since P = VI, we may write Eq. (1) as
+****** Vrms Irms = 0.707 x 0.707 Vmax Imax
+
+This may be broken into two products as:
+******  Vrms = 0.707 x Vmax and Irms = 0.707 x Imax
+
+** Transformers:
+Transformers is an electric device that is used to increase or decrease the voltage of varying sources (mainly, Alternating current sources.) It is made of two coils that are very closely packed and share the same iron core.
+
+Sharing the same iron core means sharing the ame magnetic flux (Phi m) as well.
+
+One coil i scalled the primary side and the other, the secondary side. When a varying voltage is given to the primary side, an output varying voltage devlops at the secondary side.
+***** The input voltage must vary with time. This makes the magnetic field B developed at the primary coil vary with time, accordingly.
+
+The change in B causes the change in flux Phi. The changes in Phi are sensed or picked up by the secondary coil.
+
+As a result, a varying voltage develops at the terminals of the secondary coil. If the number of loops of the secondary coil Ns is more than that of the primary coil Np, it results ina  voltage increase at the secondary side and the transformer called a "step-up transformer."
+
+***** In general, for all transformers, Vs/Vp = Ns/Np. See the figure inside our computation notes.
+    actual transformers lose a portion of the input power in the forms of heat and magnetic flux leak. For an acutal transformer,
+
+    Pout < Pin and therefore VsIs < VpIp.
+
+***** For actual transformers, the voltage ratio still equals the loops ratio; however, the reciprocal of the currents ratio does not equal the loops ratio.

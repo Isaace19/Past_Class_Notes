@@ -1,0 +1,256 @@
+* Calulus Based Physics I - Electromagnetism
+#+Author: Isaac Abella
+
+#+Note: This is for class notes as an experiment to see if online virtual notes can be useful with org mode.
+    #+Note: There can't be image inserts in emacs org mode without it taking some time, so I probably will refer to my notebook in order to have images of circuits and other diagrams/concepts.
+
+* Chapter 31 + 32 Electromagnetic Induction
+#+DATE: <2023-06-25>
+** Magnetic Induction
+    + When a charge moving at velocity V crosses a magnetic field lines of intensity B, it experiences a force F perpendicular to the plane that contains V and B. This was discussed in Chapter 21 and can be shown by flowing a current through a straight wire that is palced inside the field of a horseshoe magnet.
+    + When we set up a small current inside of a horseshoe magnet, then we can observe two states: one when the Key K is open, making no current flow through th eloop, and when K is closed, and current I is able to flow into the loop.
+        + When the key is opened, no current can flow inside of the loop, which means that there is no force on the wire segment in the magnetic field.
+        + When the key is close, it allows current I to flow into the loop (charges move at the same velocity V), and therefore, force F is exerted on the wire segment in the magnetic field B.
+
+
+    + The reverse is also possible, for if you remove the battery when the circuit is closed, then nothing would happen, but if that loop is pushed forward with the force of F, or is swung forward, an electric current I can develop. This is verified with the use of an ammeter in the loop.
+
+    + What can be concluded is that when an electric current flows in a wire in a magnetic field, the field exerts a force on the wire and causes motion (electric motor), and when a wire or a loop is moved mechanically in a magnetic field, the the current develops a loop (electric generator).
+        + This is the basis for electric motors and generators, and to understand it better in theory, then we need to understand the concept of MAGNETIC FLUX.
+** Magnetic Flux
+*** A good analogy for magnetic flux, explained with rain!
++ If you hold a ring horizontally udner rain, the maximum number of rain drops pass through it.
++ But, if you were to hold the ring straight up vertically, then no rain would pass into the ring.
++ Holding the ring at some certain angle, the rains drops can pass through, but not the maximum amount as if you were holding the ring straight horizontally.
+
++ To show the orientation of the ring in space, it is better to use teh angle that is normal with the vertical direction. IN this case, normal to the ring means that the line is perpendicular to the ring's plane. in each case, the flux of rain through the ring is differnt.
+
+  (A diagram explaining this can be referenced back to the online notes, downloaded version, or on my notebook.)
+**** Note: Magnetic field lines may also be viewed as rain lines if we are talking about a downward magnetic field. The heavier the downpour, then the stronger the magnetic field B must be.
+
+*** Magnetic Flux Through a Surface:
+    + The magnetic flux phi of a magnetic field B through a loop of surface A whose normal N makes an angle theta with the field lines, is defined as Phi = BAcos(Theta).
+
+      So what does this mean?
+
+      Magnetic Flux is known as symbol "Phi", and the SI unit for magnetic flux is Tm^2. Called a weber. For a coil of wire that has N loops, teh total flux is:
+
+                            + Phi = NBAcos*(Theta)
+
+** Faraday's Law of Magnetic Induction
+   + When a coil of wire is moved toward on pole of a magnet or away from it, a current is induced in the coil. This current can be measured by using a sensitive ammeter.
+   + To generate electric current in a coil, the magnetic flux through the loops must experience a change. Faraday showed that the voltage generated across the terminals of a coil is directly proportional to the change in magnetic flux ((change in flux)), AND inversely proportional to the time interval delta t within which the flux change occurs. He came up with teh following formula:
+
+**** NOTE: I don't really have Latex knowledge just yet to make proper math symbols, so reference my exam cheat sheets and my notebook computations to see the actual formulas and examples.
+                        E = -(Change in magnetic flux) / (Change in time)
+                        This is Faraday's Law of Magnetic Induction.
+
+   + In Faraday's Formula, v is the induced volage, or the electromotive force (emf) generated in the coil. delta phi is the change in the magnetic flux, and the delta t is the change in time.
+
+   + In SI, it is easy to show that V has the unit of volt as is expected. the (-) in the front of the equation indicates that the direction of the induced voltage opposes the direction of change in the flux that causes it. This will be discussed under Lenz's Law later.
+** Lenz's Law:
+***  I think that my lab 7: Electromagnetic Induction has a good explanation for real application of Lenz's law, so if these notes confuse me in the future, just go to libre and open the lab report 7.
+    + When the North Pole of a bar magnet is pushed toward a coil, it induces a current in the coil. This current in the coil will then magnetize the coil. The direction of the induced current is such taht the end of the ciol that is ebing approached by that N-Pole becomes an N-Pole itself to oppose the approaching N-pole.
+
+    + Then, if the N-Pole is moved away from the coil, the coil will get magnetzied again, but this time the end of it that is near to the N-pole that is receding away will become an S-Pole, and begin to oppose the N-Pole going away.
+
+***** Similarly:
+    + When the S-pole of a bar magnet is pushed toward a coil, it will induce a current in the coil, then that current in the coil gets magnetized, and polarized. So the direction of teh incued current is such that the end of the coil being approached by the S-pole becomes an S-Pole itself to oppose the approach of this new S-Pole
+
+    + And similarly again, when the S-Pole is moved away from the coil, the end of the coil that is closest to the receding S-pole will become an N-Pole in order to oppose the going away of the bar magnet's S-Pole. The following figures inside our computation notebook will show the polarizataion of the coil in both cases.
+******** VIDEO on LENZ'S LAW: https://www.youtube.com/watch?v=sENgdSF8ppA
+** Inductors:
+    + An inductor is a coil of wire. And we have already learned that any current carrying coil has magnetic properties. in fact, an inductor is a device that stores magnetic energy.
+
+****** Inductors Resist or Respond to Current Changes:
+    Any time the current in an inductor is set to change, the inductor resists that cange by developing an opposing voltage.
+
+    As soon as that coil is connected to a battery, the current in the circuit changes from 0 to I by an amount Delta I (Change in Current). the current change in  delta I causes a change in delta B that cuases the flux change Delta Phi.
+
+    Then that change in the magnetic flux causes a voltage to develop across the coil other than the battery voltage.
+
+    The developed voltage has an opposite polarity compared to the battery voltage (Lenz's Law).
+
+    Experiments show that the shorter the connection time Delta T, the greater the developed opposing voltage there is across the coil. We can show this change in applied current per unit of time as change in current divided by the change in time, and the opposing voltage that the inductor develops as VL.
+
+********* Look to computation notebook to see what this means with proper symbols.
+
+
+******* What Does this mean?
+    L is the "self-inductance" of an inductor is the proportionality constant. L depends on the physical characteristics of the inductor. L actually depends on teh number of loops per meter of the inductor n, its length l, its loop cross sectional area A, and Uo. The formula for self inductance L is in the computation notebook.
+
+********** L = Uo* n^2 * A * l. The SI unit for self inductance L is called ohm-second, called "Henry". The Uo in this case is 4pi x 10^-7 Tm/A, which we can recall as the permeability of a vaccuum.
+
+********** To Summarize, when the current varies from O to I, the indcutor will develop an opposing voltage to resist that new change, this can be seen in a diagram in our notebook and online notes.
+
+
+******* More about Self Inducatance:
+    The opposing voltage that id developed by the battery does not last longer than the connection time. The connection time is a very small fraction of a second.
+
+    As soon as the current int he inductor can stablize and does not change with time, the opposing oltage that was there to resist the change now drops to zero and th eindcutor behaves as if it does not exist.
+
+    This is simply because inductors themselves have small "ohmic" resistances and do not cause significant voltage drops in the circuits.
+        It is for this reason that inductors can be used as short circuits for non-varying currents.
+
+********* IN BRIEF:
+    The opposing voltage that an inductor develops is proportional to L and the time rate of change of current: Delta I divided by Delta T (The change in current divided by the change in time)
+
+** The magnetic Energy Stored in an Inductor:
+* Chapter 33 Alternating Current Sources and AC Circuits.
+#+DATE: <2023-06-28>
+** Ac Circuits:
++ The exploration of how resistors, capcitors, and inductors behave with the use of an AC source. Each of these elements alone with an AC source will be studied then combined and see how they react with an AC source.
+** A resistor and an AC Source:
++ A resistor is connected to an AC source will act similar to the case of being connected to a DC source. The symbol for an AC source is as shown in the computation notebook and online notes.
++ The voltage current relation, Ohm's Law is:
+******* Vrms = R Irms and Vmax = RImax.
+** A Capcitor and an AC Source:
++ When connecting a capacitor to an AC source, in half of a cyucle it faces charging, and the next half of the cycle faces reverse polarity that cases discharging.
++ This develops a certain resistance int eh circuit that we call "capacitive reactance, Xc".
+  + Capacitive reactance depends on two factors. one is the capacity C itself. The greater the capacity C, then the less reactive the capacitor is toward beings charged or discharged.
+  + The other factor that is involved is the angular frequency W of the source that alternates charging and dishcharging.
+***** Please note that in this case, W is omega symbol
++ The smaller the frequency of the source, the more time the capcitor has in each cycle to charge or discharge and therefore, develop more resistance.
+*** Formula for Capacitive Reactance, Xc
++ The formula for the capacitive reactance, Xc and a circuit diageram for a capacitor connected to an ac source are shown below in computation notebook.
+
++ The unit of Xc, capacitive reactance, is Ohms, Omega. The formula for the capacitor is also shown in the computation notes.
+
+****** Note that contrary to a resistor, the current through a capacitor is not in phase with the voltage across it.
++ When comparing the voltage and current graphs, take note that when Vc is zero, then the Ic is maximum.
++ And when Ic is zero, then Vc is maximum as expected. that is why there is a difference of 90 degrees between the two.
+
+** An Inductor an an AC Source:
+When an inductor is connected to an AC source, the inductor reacts to the nonstop changes in current and will develop a responding nonstop opposing voltage to resist the changes.
+
+This opposingvoltage creates a type of resistance in the circuit that is called "indcutive reactance, XL". The inductive reactance depnds on two factors:
+
+**** One is self inductance L of the inductor. The greater the L of the indcutor has, teh greater resistance it will develop towards the change sin the current.
+
+**** The other factor is the angular frequency W (remember this is omega) of the source. The greater the frequency of the source, the faster the changes are made in the current, therefore the greater the inductor reacts.
+
+******* The SI unit of XL is Ohms Omgea. The formula for the current through the inductor is shown in the computation notes.
+
+******* Note that contrary to a resistor, the current through an inductor is not in phase with the voltage applied across it.
+
+Comparing the voltage and current graphs, note that when VL is zero, then th IL is maximum, as expected. That is why there is a 90 degree difference between the two.
+
+** The General Case: The RCL Series and Circuit:
+*** The general case, is when an AC source is in series with a resistor, a capacitor, and an inductor at the same time.
++ While the sequence itself is not important, we can mathematically be shown the overall resistance called: "IMpedance, Z" of the circuit.
++ Z is given by the formula shown in the computation notes.
++ Again, the unit of Z turns out to be Ohms Omega. the amount that current may lead or lag voltage depends on the capacity C, the inductance L, and the resistance R of the elements.
++ Mathematical solutions provides a phase angle, lowercase phi, that measures the amount of lead or lag between the current and voltage in the circuit.
++ A positive phase angle indidcates that the voltage is leading the circuit, the formula for phase angle is also given the computation notebok.
++ The Max and RMS currents mayt be found from:
+****** Imax = Vmax/Z & Irms = Vrms/Z.
+** LC Resonance Circuits:
+*** If R = 0 in an RCL circuit, teh circuit forms the so-called "LC Circuit." The LC Circuit are used as electric oscillators. With each LC Circuit having a natural frequency that depends on the values of Capacitance C and Inductance L.
++ The figure inside our computation notes show that an LC circuit in which the capacitor has an initial charge Qo on it.
++ As soon as the Key K is turned on and the circuit is clsoed, the charge Qo tends to flow into the inductor, which reates a varying current on it.
++ The inductor reacts strongly towards the change in the current, and reutrns back to the capacitor and by developing its opposing voltage.
+
++ The capacitor getting charged again returns that current towards the inductor and the process will start again, and keep repeating.
++ If there is no ohmic resistance to dissipate energy, then theoretically this process would continue for ever and the result is an electric oscillator.
+  + This is similar to the mass-spring system (with no friction) that is put into oscillation. ti oscillates for a long time.
+** An Application of the LC Circuit:
++ The LC combination is very important in trasmitter or receiver circuits.
++ The capcity C in an LC circuit can be changed such that the natural frequency of the LC circuit becomes equal to the frequency of the received signal. When this tuning occurs, teh LC circuit is said to be "In Resonance" witha  received signal frequency.
++ This is how a receiver radio set can work because when you set up a LC circuit to have an antenna, you can then introduce a large amount of signals at varying frequencies.
+    + Then the antenna just has to find one signal that matches its natural frequency, this is just like tuning a radio to the correct station with a this simple circuit design.
+****** Reference Computation Notebook to see the circuit design.
+* Chapter 24 Gauss's Law/Principle
+** We need to go back and understand a bit more about electric flux in order to understand the statements for Gauss's Law.
+
+**** ELECTRIC FLUX
++ If you hold a ring horizontally under rain, the maximum number of rain drops pass through it, if you hold it ertically, no rain drop passes through it. If you hold the ring at some angle, then some rain drops but not the amximum possible can pass through.
+
++ To show the orientation of the ring in space, it is better to measure the angle that is its normal vector N makes with the vertical direction.
+
++ The amount of rain passing through the ring is called the flux of rain through the ring, in each, the flux of rain hrough the ring will be different.
+
++ Electric field lines may also be viewed as rain lines if we are talking about a downward electric field, the heavier the downpour, the denser the field-lines, the stronger the electric field E.
+** Electric Flux Through a surface:
+    + The electric flux of phie (phi e = phi electric field) of a uniform electric field E through a loop of area A is defined as Phi = EAcosTheta. where theta is the angle ebtween the field lines and the normal vector n to the plane of the loop.
+    + The symbol for phi is the greek letter phi. An appropriate figure for this formula is shown in our computation notebook.
+
+    + The Si unit for electric flux is (N/C)m^2. As can be seen from the computation drawing, if the loop is rotated such that vector n becomes parallel to vector E, angleTheta becomes zero, that akes cos0 = 1. In such a case, the Phi e = EA gives the maximum flux.
+
+    + If the loop is rotated such that Theta = 90 degrees, then the cosTheta =  0 and Phi = 0. The loop beocmes horizontal and non of the field lines passes through it. Fig 2 shows the electric flux of a uniform electric field in which field lines are parallel.
+** The Electric Flux of a Non-Uniform Electric Field:
+    + The following figure in our computation notes shows the filed lines of a non-uniform field passing through a certain surface area. Five field lines are shown along with five small area segments Delta A1, Delta A2, and so forth until Delta A5. Each segment of DeltaA field has a different determined by its Ei vector.
+    + Of course, the orientation of each segment of Delta A is determined by its own normal vector n; the small flux of delta phi through each Delta A can be calculated as:
+    + Delta Phi = Ei * Delta Ai cosThetai (1) (remember that i in this case is the indicator for numbers such as Detla A1 or Delta A2).
+    + The angles of thetai are not shown in order to keep the figure more clear. As you can see, the angle between N1 and E1 is not equal to angles between n2 and E2, n3 and E3, and so on.
+
+    + Recall that the difintion of the dot product of two vectors A and B making an angle of a with each other, that is A * B = ABcosa (in this case a is referring to alpha) where the bold letters denote the vector quantites and regular letters their magnitudes.
+    + This equation given reads as: "The dot product of vectors A and B is equal to magnitude A times magnitude of B times the cosine of the angles in between."
+
+    + Equation 1 is exactly the defintion of dot product. Actaully, the dot prodcut was orignally defined for applications such as this.
+    + Remember that the result of a dot product will always be a scaler value
+    + We can also go ahead and rewrite equation 1 as:
+                                                        Delta Phi = Ei * Delta Ai (2)
+      + In equation 2, because the sumbol of the dot (.), Ei and Delta Ai are shown in bold letters meaning that they are vectors. The solution to (2) is (1) where magnitudes Ei and Delta Ai are multiplied by each other times the cosine of angle in between. For simplicity, we can use (2) as the flux through a typical small area segment.
+
+        + The calculate thetotal flux phi through surface S, all such delta Phii (five of which are shown) must be added.
+
+          The sum of all segments is calculated as:
+
+          phi = The Summation of Delta Phi = Summation Ei * Delta Ai (3) By summation, I mean that greek symbol sigma that we also use in calc II
+
+          Phi = E1 * DeltaA1  + E2 * DeltaA2 + .... + Em * Delta Am (4)
+                  Where m is the number of segments that covers surface S.
+
+          + To find the exact value for phi, the electric flux, the number of tiny area segments must approach infinity or the size of DeltaAi must approach 0. In other words, we can say that that Delta Ai must be replaced with change in A, dA, and consequently, The sigma/Summation must be replaced by an integral.
+
+          + Therefore, we can rewire equation (3) as:
+
+                          Phi = The integral E * dA (5)
+
+      + In this integral, the normal vector n is embedded in dA because A is show in bold letter emphasizing its vectr nature. Note that defining n, the vector normal to the area segments, we are giving each segment a direction taht determines its orientation in space. The symbol dot(.) includes the cosine of the angle of the product.
+
+** Gauss's Law:
++ Gauss's Law states that: "The net flux through a clsoed surface is equal to Q/Eo" where Q is the net charge entrapped in that closed surface. Another version of this statement is:
+
++ The flux of charge Q entrapped in a closed surface through (or coming out of) that closed surface is equal to Q/Eo. A sphere, a cube, or an influated nylon ballon of any shape is treated as a closed surface. If a charge Q is trapped inside any of these shapes. As long as the surface is closed, teh total electric flux by the chage through that closed surface is equal to Q/Eo. in other words we may write from equation (5) of electric flux on a non-uniform field, in our computation notebook that:
+
+                                The integral of E * dA is equal to Q/Eo where integral means a closed surface (6)
+
++ This can easily be verfied for a point charge Q placed at the center of a sphere of radius R. The proof is as follows: (draw and write this into our computation notebook).
+
+  Since the point charge is at the sphere's center, all field lines are exactly radial lines. Because of spherical symmetry, any selected area element dA has its normal vector n also along its radial field line. This makes the angle between E and n to be zero at each point or element.
+
+  With Theta = 0, Cos0 = 1.
+
++ Applying the closed surface integral, we get:
+
+********** Because of the amount of symbols not available, look inside the notebook.....
+
++ Gauss's law is thus verified. If Q is not placed at C, then E and n will make different nonzero angles with each other at different points (or selected area elements) and the integral will not be that easy to evaluate.
+
++ However, the final outcome will be the same, and the answer to that complicated integral will be Q/Eo again. The reason is that the number of electric field lines that Q can generate is limited to its amount, Q, and the permittivity of the medium, E0, regardless of the shape of the enclosing surface and the location and distribution of the clsoed surface. What was your answer to example 3?
+
+  * So the answer to example 3 should also just be the sphere's magentic flux because its a closed surface either way, so 3600(N/C)m^2. Very cool!.
+** Gaussian Surface:
+    + The gaussian surface is an imaginary surface that we assume around a point charge or any charge distribution. Assuming such imaginary surface is helpful in determining the way the electric field vaires around a given charge distribution. Of course, any selected Gaussian Surface must surround or entrap the charge distruvtion under study.
+    + The way the total flux is know, simply Q/Eo. If good symmetry exists in or around the charge distruvtion, and also a summetricla Gaussian surface is slected, surface calculation becomes easy, and that facilitates the calculation of the unknown electric field E.
+
+*** Important Points in Gaussian Surface Selection:
+    1) Use symmetry.
+    2) Choose a Guassian surface that is either parallel to the normal vector n, or perpendicular to it.
+    3) If E is parallel to n over a certain area, then the magnitude of E is constant for that portion of the area, and makes the integration easier. If E is perpendicular to n over a certain area, then the flux is zero through that portion of the area.
+
+** Guass's Law Applied to Conductors:
+    + In general, the direction of electric field at any point on a surface charge whether flat or curved is perpendicular to the surface at that point. if the surface is flat and large (theoretically infinite), the field lines being perpendicular to the surface become parallel to each other and make the field uniform on each side of a sheet of inite size.
+    + Note that by a sheet of charges, we are refering to the electric charges thatare distributed over a non-conducting (insulator) surface. The figures emphasizing this argument are shown in the diagrams in the computation notebook.
+
+    + If the electric charges are distributed over an infinite by flat conducting surface, they all gather on one sid eand double the electric field strneght on that side to become E = s/Eo. The field doubles compared to a non conducting sheet because all charges gather on one side of the conductor.
+
+    + Part (b) of the diagram shows the field lines for an inifite flat conductor as well as a curved (closed surface) conductor. The proof of the formula in (b) , E = s/Eo. is left as a problem for students. The proof will be similar to example 11 with field lines passing through the top circular area only.
+
+** Cavity in a conductor:
+    + The figure on the right inside of our computation notebook shows a conductor that has a cavity inside. If a charge like +Q exists inside that cavity, its effect appears on the outer surface of the conductor as if +Q is distributed over it.
+
+    + The reason is that +Q attracts as much as -Q on the inner surface of the cavity (the conductor part) and repels as much as +Q onto the outer surface of the conductor.
+
+    + We can verify this by applying a Gaussian surface. Since within the material of the conductor, the electric field is zero, if we assume a  Guassian surface around the cavity as show, the net flux through this surface must also be zero. This requires a charge distruvtion of -Q on the inner wall of the cavity. Since the conductor is netrual to begin with, its external surface accumulates +Q.

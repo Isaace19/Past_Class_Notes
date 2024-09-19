@@ -1,0 +1,31 @@
+recursion is just iteration with explicit call stacks
+  - meaning we have to use explicity stack. 
+
+
+recursion types:
+  linear recursion - single calls
+  tail recursion - last step before returns
+      these two are O(N) complexity
+
+  tree recursion - multiple calls to itself (expensive if overlapped) 
+      This can be a O(N) - O(2^N)
+
+  nested recursion - solve (A, solve (B, *))
+
+  Backtracking - constraint satisfaction, systematic search 
+
+
+In class example:
+
+assuming y < x; then x % y = x - ky, k > 0;
+
+We have two cases:
+
+Case 1: x/2 < y -> k = 1 therefore x % y = x-y < x/2
+Case 2: y <= x/2 -> k > 1 therefore we know that x%y < y 
+            x % y is always going to be < x/2
+           
+Fibonacci recursive function
+
+a+b is to a as a is to b
+

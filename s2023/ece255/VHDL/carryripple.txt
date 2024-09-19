@@ -1,0 +1,33 @@
+Author: Isaac Abella
+Description: 4 Bit carry ripple adder VHDL code until I instal vivado on Ubuntu.
+
+
+text file implementation of the VHDL code for a 4 bit carry ripple adder implemetnation.
+
+writing out the code for just the carry ripple adder, assuming that the inputs entity and architecture for the inputs and output have been defined. 
+
+// start
+
+entity CRA is 
+	port(...);		// differentiating the entity in the port list, you have to clarify the input and output
+end CRA;
+
+// define the archtecture of CRA
+
+architecture struct of CRA is 
+	// declarative section of the components
+	component top_arch
+		port(....)  // give a port list 
+end component 
+
+// done with declarative section, now we have to declare some intermediate signals (optional)
+// they are the intermediate signals of c1, c2, c3: of the type std_logic;
+
+begin // actual implementation
+	m1: top_arch port map(...);
+	m2: top_arch port map(...);
+	m3: top_arch port map(...);
+	m4: top_arch port map(...);
+end;
+
+// nesting components inside of a larger component until you have a larger component fully made. 

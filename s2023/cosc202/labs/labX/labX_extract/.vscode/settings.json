@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "system_error": "cpp",
+        "__bit_reference": "cpp",
+        "complex": "cpp",
+        "iosfwd": "cpp"
+    }
+}

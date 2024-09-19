@@ -1,0 +1,164 @@
+#+TITLE: Isaac's Planner
+#+AUTHOR: Isaac Abella
+#+DESCRIPTION: Org file to use for classes in College
+Try to keep this updated by looking at it everyday in the morning, review what's new for the day, and just cleaning up the file every once and a while :
+NOTE: For these summer classes just assume that things are due at midnight unless specified otherwise
+
+
+*********************** Planner
+
+* DONE Advisor meeting
+SCHEDULED: <2023-11-03 Fri 11:00-11:30>
+** Discuss physics or math minor for computer engineering
+** Discus Spring semester and taking chemistry
+
+* TODO tweak Cerberus
+** Fix merge conflict and branch set behind
+
+* TODO Update School.org
+** Add math 241 office hour information.
+
+* TODO Check Piazza
+
+* TODO visit
+
+*********************** Class Schedule
+
+* EF 152
+** Properties
+*** Instructor: Dr. Chestunutt and Dr. Gelles
+*** Location: ZEC 177 Lectures, ZEC 271 Labs
+*** Textbook - University Physics: https://efcms.engr.utk.edu/ef152-2023-08/gen/resources.php
+
+** Schedule
+*** TODO EF 152 Lecture
+SCHEDULED: <2023-10-23 12:40 - 13:40 ++1w>
+*** TODO EF 152 Lecture
+SCHEDULED: <2023-10-25 12:40 - 13:40 ++1w>
+*** TODO EF 152 Lecture
+SCHEDULED: <2023-10-27 12:40 - 13:40 ++1w>
+
+*** TODO 152 Lab Section
+SCHEDULED: <2023-10-24 9:40 - 11:00 ++1w>
+*** TODO 152 Lab Section
+SCHEDULED: <2023-10-26 9:40 - 11:00 ++1w>
+
+** homework:
+*** DONE 3-5 practice
+SCHEDULED: <2023-10-27 23:59>
+*** TODO Look over all the lab assesment questions
+SCHEDULED: <2023-10-28 03:30>
+*** TODO Do prep and practice 3-6
+SCHEDULED: <2023-10-28 03:30>
+*** TODO Print out the equation sheet and add edits to it
+SCHEDULED: <2023-10-28 03:30>
+
+* CS 202
+** Properties
+*** Instructor: Dr. McGreogr
+*** Location: WAB M307 Lecture, MKB 421 for labs
+*** Textboook - The C++ Primer ||  Data Structures and Algorithms
+*** Piazza - https://piazza.com/class/lko2z1ykmvr7ok
+
+#+Office Hour
+    Jens Gregor: 1:30 - 2:30 Tuesdays and Thursday in MK311
+    S Patel: 4:00 - 5:00 Tuesdays and Thursday in MK416
+    B Roachell: 3:00 - 4:00 Monday, Wednesday, and Friday in MK416
+
+
+[Look at the CS202 Piazza and Canvas for updates]
+
+** Schedule:
+*** TODO 202 Lab assignment class
+SCHEDULED: <2023-10-23 Mon 10:00 - 10:50 ++1w>
+*** TODO 202 Lecture
+SCHEDULED: <2023-10-24 Tue 14:30 - 15:50 ++1w>
+*** TODO 202 Lecture
+SCHEDULED: <2023-10-26 Thu 14:30 - 15:50 ++1w>
+
+** homework:
+*** DONE Homework 6
+SCHEDULED: <2023-10-24 23:59>
+*** TODO Lab 5
+SCHEDULED: <2023-10-25 23:59>
+*** TODO Homework 7
+
+* ECE 255
+** Properties
+*** TAs:
+Kishan: Tues. & Thurs @ 11:15 - 12:15 in MKB 224
+    Email: kpatel78@vols.utk.edu
+Ben Clark: Wed. 3:00 - 4:00, Fri. 10:15 - 11:15
+    Email: bclark49@vols.utk.edu
+*** Location: MKB 404 For Lectures and Lab I think?
+*** Textbook:
+Charles H. Roth, Jr. and Larry L. Kinney, Fundamentals of Logic Design, Enhanced 7th
+Edition, Cengage Learning, 2019. (ISBN 978-1-337-62035-2)
+*** Canvas: https://utk.instructure.com/courses/180713
+
+[Refer to Canvas and TAs for questions]
+
+** Schedule:
+*** TODO ECE lecture
+SCHEDULED: <2023-10-23 9:00 - 10:00 ++1w>
+*** TODO ECE lecture
+SCHEDULED: <2023-10-25 9:00 - 10:00 ++1w>
+*** TODO ECE lecture
+SCHEDULED: <2023-10-27 9:00 - 10:00 ++1w>
+
+** homework:
+*** TODO Lab 3
+SCHEDULED: <2023-11-01 Mon 17:00>
+
+* MATH 241
+** Properties
+*** Instructors: Dr. Fowler and Dr. Berry
+*** Location: MKB 622 for Lectures, ZEC 377 for Quiz
+Note that Tuesdays are also classes but they are videos.
+*** Textbook: Advanced Enginering Mathematics
+https://bookshelf.vitalsource.com/#/
+*** Piazza -  https://piazza.com/class/lkwot5fl6ro6qx/live
+*** Office Hours
+
+Dr. Fowler - Ayres 104 - MWF 13:50 - 14:40
+Tuesdays can be a zoom appointment
+
+Dr. Berry - Min Kao Building 616 - 13:00 - 14:00
+Can be by appointment on zoom
+
+TAs:
+Charlotte and Nathan can both be through zoom, message on piazza.
+
+** Schedule:
+*** TODO 241 Lecture
+SCHEDULED: <2023-10-23 Mon 14:30 - 15:50 ++1w>
+*** TODO 241 Lecture
+SCHEDULED: <2023-10-25 Wed 14:30 - 15:50 ++1w>
+*** TODO 241 Lecture
+SCHEDULED: <2023-10-27 Fri 14:30 - 15:50 ++1w>
+*** TODO 241 Quiz day
+SCHEDULED: <2023-10-27 Fri 15:00 - 15:50 ++1w>
+** homework:
+*** DONE homework 9.9
+*** TODO homework 9.10
+SCHEDULED: <2023-10-29 23:59>
+**** TODO Look at least 5 questions before practice set Friday
+SCHEDULED: <2023-10-26 17:00>
++ Do at least 5 of those questions tonight
+*** TODO show work for homework 9.8
+*** TODO video lecture for tuesday
+SCHEDULED: <2023-10-27 17:00>
+
+
+* COSC 493
+** Reinforcment Machine Learning paradigm
+ - try to learn how to do machine learning programming.
+
+** TODO Start and Finish 3D print modeling of starship robot in fusion360
+
+
+* Chinese 101 with Xin
+** Instructor: Xin Khor
+** Location: Hodges library
+** Textbook: Chinese to English standard dictionary - still need to get.
+

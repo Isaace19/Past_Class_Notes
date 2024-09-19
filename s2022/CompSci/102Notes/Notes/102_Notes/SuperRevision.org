@@ -1,0 +1,69 @@
+#+TITLE: My Notes for Final Exam
+#+AUTHOR: Isaac Abella
+#+DATE: <2023 - 5 - 8>
+
+* What do I need to do?
+** Well I need to review my midterm notes and my midterm questions
+-
+  1. First I need to review the actual study guide
+  2. Then I need to review my missed exam questions.
+  3. I need to add everything to a quizlet
+  3. I need to heavily review pointers and recursion.
+
+* Here's a list from my Study Guide Download
+** LINK TO MY STUDY GUIDE
+-
+  file:/Users/isaacabella/Documents/Sharing/COSC/StudyGuides/CS_102_Final_Study_Guide.pdf  
+  
+*** I can already anticipate that Prof. Crumpton will add some review in class
+- Below is a link to that .cpp file!
+  [[file:/Users/isaacabella/Documents/Compsci/COSC102/EmacsNotesCode/ReviewCode.cpp]]
+ 
+**** Link TO MY QUIZLET REVIEW
+-
+  *WARNING: THE QUIZLET WAS MADE WHEN I WAS SLEEPING SO SOME OF THE ANSWERS MIGHT ACTUALLY BE WRONG, REFERENCE THE ACTUAL CANVAS PAGE*
+  https://quizlet.com/799357740/flash-cards/?new
+
+  I also have some quizlets from midterm 1 and midterm 2 to work on
+-
+  Midterm 1 quizlet packet
+  https://quizlet.com/781315312/cs102-midterm-flash-cards/
+
+-
+  Midterm 2 quizlet packet
+  Don't have one, but *Remember that you have midterm notes in black box*
+
+  
+* My To-Do List
+- [] Add more questions to my quizlet review 
+- [X] Take notes of all comp sci lecture and slides DEADLINE: <2023-05-11 Thursday 12:00>
+- [X] Figure out how to compile these notes
+- [] See if you can answer all the study guide material
+- [] Watch the attached videos on canvas again.
+- [X] Don't forget to do political science review packet
+- [X] attend political science discussion and review sessions
+- [X] have to take time to atleast do one page of the study guide before pullling up
+- [] Make sure to research the Sixth block of the politcal Science Study Guide for tonight
+- [] Do the practice exam that was released on Canvas for Computer Science. DEADLINE: <2023-05-11 Thursday 11:00>
+  
+
+* Final Exam
+<2023-05-12 Fri 1:00-3:15>
+Reminder: 50
+
+* Political Science Discussion Session
+DEADLINE:<2023-05-10 Wed 4:30-6:30>
+Reminder: 50
+** TODO: Study political science packet more; mainly british politics seems to be what I need to fill in the gaps most with.
+
+* Midterm 1 and Early Year Stuff
+
+
+  
+
+
+
+
+
+
+

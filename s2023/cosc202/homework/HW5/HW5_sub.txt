@@ -1,0 +1,95 @@
+Name: Isaac Abella
+Descritpion: Solution to Homework 5
+
+Problem 1
+Consider a hash table for which collisions are handled by chaining using single-linked lists. The keys are
+integers. The table size is 10. The hash function is h(key) = key % 10. Determine the contents of the hash
+table AFTER the following sequence of integers have been inserted: 12, 44, 13, 67, 23, 90, 11, 25, 21,
+and 45. List the table index followed by the chain of keys with the oldest key listed first. That is,
+0 : 90
+1 : 11, 21
+etc
+
+Answer: What's being asked of us is to determine the where each integer in our list goes, then compare the output with the index and key given
+
+so in order to get the hash key for each element we would calculate it using h(key) % 10. 
+
+calculate: plug in the integer list to the h(key) function 
+12 % 10 = 2
+44 % 10 = 4
+13 % 10 = 3
+67 % 10 = 7
+23 % 10 = 3
+90 % 10 = 0
+11 % 10 = 1
+25 % 10 = 5
+21 % 10 = 1
+45 % 10 = 5
+
+Therefore: The location of where each of the integers go in the list is based off this key index, meaning 90 % 10 = 0 would go first.
+(I'm guessing you started the list for us to give us a hint on how to approach the solution)
+
+0 : 90 no collision
+1 : 11, 21 there is collision with 11 being the first key and 21 being the second key
+2 : 12 no collision
+3 : 13, 23 there is a collision with 13 being the first key and 23 being the second key
+4 : 44 no collision
+5 : 25, 45 there is a collision with 25 being the first key and 21 being the second key
+6 : 
+7 : 67 no collision
+
+Problem 2
+Consider a hash table for which collisions are handled by open addressing based on quadratic probing.
+The table size is 23. The hash function is h(key) = key % 23. For each integer key in the sequence 12, 44,
+13, 67, 23, 90, 11, 25, 21, and 45, list the key and the set of table indices tested until insertion is
+successful. That is:
+12 : 12
+44 : 21
+13 : 13
+67 : 21, 22
+etc
+Note the format of this listing is DIFFERENT from the one in Problem 1.
+
+Answer: to create a hash table that avoids collisions we have to use the quadratic probing formula
+This is given as: h(key) + c1 * i + c2 * i^2 % table size.
+
+12 % 23 = 12
+44 % 23 = 21
+13 % 23 = 13
+67 % 23 = 21 - there is already a value there: 21 + 1^2  % 23 = 22
+23 % 23 = 0
+90 % 23 = 21 - there is already a value here: 21 + 2^2 % 23 = 2
+11 % 23 = 11
+25 % 23 = 2
+21 % 23 = 21
+45 % 23 = 22
+
+now apply quadratic probing
+therefore: our equation looks like h(key)i + 1i^2 % 23
+
+0 : 23
+1 : 
+2 : 90
+3 : 25
+4 : 45
+5 : 
+6 : 
+7 : 
+8 : 21
+9 : 
+10 : 
+11 : 11
+12 : 12
+13 : 13
+14 : 
+15 : 
+16 : 
+17 : 
+18 : 
+19 : 
+20 : 
+21 : 44
+22 : 67
+23 : 
+
+

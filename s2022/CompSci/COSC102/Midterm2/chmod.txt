@@ -1,0 +1,54 @@
+CHMOD
+Chmod stands for 'change mode'. This allows us to change access permissions for
+files.
+
+Inside your home directory on Tesla, make a directory called practiceChmod.
+(Don't do this on any directories already made.)
+Inside, make a .txt file that just says "My name is [insert name here]." Call
+the file name.txt.
+After exiting VIM (or your text editor of choice), stay in the practiceChmod
+directory. If you type ls -l, that is a long form of listing the contents of the
+directory. You'll see a string listed first that's 10 characters long. This
+string tells us the permissions of the file or directory (and if it's a file or
+directory).
+
+For example:
+-rwx-wx-wx
+
+The first character is either d or -. If the first character is a d, then that
+item is a directory. If it's a dash, it's a file.
+Think of everything after the first character as three sets of three (for a
+total of 9 chars). You will either see an 'r', 'w', 'x', or '-'.
+The 'r' stands for read
+The 'w' stands for write
+The 'x' stands for execute
+
+___   ___   ___   ___   ___   ___   ___   ___   ___   ___
+d      r     w     x
+or     or    or    or
+-      -     -     -
+      |____USER______|  |___GROUP______|  |____WORLD_____|
+
+Let's just think about the last 9 digits from now on (this is what we change
+with chmod). If we have rwx------ as that string, then the user has read,
+write, and execute privileges but no one else does.
+Each one of these is a bit, either on (letter shown) or off (dash shown).
+That example (last 9 digits only), would be
+111 000 000
+If we label r = 4, w = 2, and x = 1 (notice - in sets of three, these are
+the fours place, twos place, and ones place), then having rwx all set would be
+4 + 2 + 1 = 7.
+
+Here are all the options:
+0 = no permissions whatsoever; this person cannot read, write, or execute the file
+1 = execute only
+2 = write only
+3 = write and execute (1+2)
+4 = read only
+5 = read and execute (4+1)
+6 = read and write (4+2)
+7 = read and write and execute (4+2+1)
+
+What would running 'chmod 755 me.txt' do to the file?
+What about 'chmod 622 me.txt'?
+What about 'chmod 000 me.txt'?

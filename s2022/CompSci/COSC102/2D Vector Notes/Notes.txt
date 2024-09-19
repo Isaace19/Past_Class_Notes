@@ -1,0 +1,44 @@
+2D vectors and arrays
+*****************************************
+matricies, tables, etc.
+
+Example - Studen'ts Exam Scores 2D vectors
+start indexing at 0
+
+*Inner* vectors do not have to have the same size
+0 = [100, 85, 91]
+1 = [93, 79, 92]
+2 = [65. 62]
+3 = [72, 49]
+------------------------------------------
+Calling a Vector
+vector<type> vectorName;
+The vector type can be int, string, double
+
+vector < vector <int> > exams; (put the spaces inbetween the operands)
+Some older versions of C++11 will ask you to put spaces between the <> operands it will interpret it as extraction operator Calling
+------------------------------------------
+c++ typedef
+create a "nickname" for a type
+
+example: 
+typdef int Fred;
+Fred i = 5;
+Now Fred is a new name for int
+
+typdef vector<int> iVec;
+now, I can make/declare a 2D vector of ints with: 
+
+vector<iVec> exams; this is equivalent to vector<vector<int>>exams;
+------------------------------------------
+Used with enums and are optional when coding in class
+
+More examples of 2D vectors where there's not a same amount of columns
+
+** Pascals Triangle **
+
+imaagine a triangle with the first and last elements of the row are 1 and every other element in between 
+is the sum of the two numbers above it.
+
+** Code Process ** 
+The outer vector will hold a vector of integers

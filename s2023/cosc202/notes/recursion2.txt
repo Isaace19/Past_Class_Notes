@@ -1,0 +1,27 @@
+10/31/23 Notes
+enumeration and more recursion
+==============================
+
+successive halfing shift by 2 - dividing by 2
+           generated from least significant bit to most significant bit
+
+void dex2bin(int number){
+     if(number == 0){
+        return;
+     }
+     dec2bin(number/2);
+     cout << (number%2);
+}
+
+this function is made as as stack data structure.
+
+Iterative and Recursion, the relationship is the opposite. So you would do recursion as the opposite of iterative solutions.
+
+Recrusion functions are being called and made on the stack, this way we can reverse the order. (stack datastructure can reverse order of lists)
+
+Enumeration: Iterate through all elements in a set
+
+number combinations
+
+N
+K notation              n!/k!(n-k)!

@@ -1,0 +1,27 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "files.associations": {
+        "vector": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "system_error": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "__node_handle": "cpp",
+        "fstream": "cpp",
+        "locale": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "deque": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "stack": "cpp",
+        "string_view": "cpp",
+        "variant": "cpp",
+        "chrono": "cpp",
+        "ostream": "cpp"
+    }
+}

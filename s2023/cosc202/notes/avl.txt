@@ -1,0 +1,56 @@
+Binary Search Tree part 2 T - Null at T
+
+Search tree
+
+find smallest and largest key in a binary search tree
+
+leftmost node is smallest value, rightmost node is the largest value
+
+inorder transversal is sorted output
+
+Binary search tree can be used to sort if you do an inorder traversal.
+
+struct node to hold a key (requires a constructor) 
+have a key, with some data, most likely template base of Tk
+
+{assuming that Tvalue is just a template value}
+we could have a Tvalue value; a key value like a map. Aka data with payload is something that's possible, but not important for now. 
+
+have a left and right mode to navigate nodes.
+
+But with AVL, we can introduce rotation to avoid binary tree branches becoming longer/imblanced compared to the otherside of the tree. 
+
+Equivalent cases lead to symmetry in our trees, so we can cut them out. 
+Therefore we can avoid explicity named pointers by creating an array of pointers. A link array of link 0 being left, with right being link 1.
+
+Very simple...
+
+Going back to min and max key finding
+how can we find them? 
+
+Knowing a recursive backtracing/iterative counterparts to navigate a tree, 
+
+Recursive: return a pointer to a node for derferencing. 
+    to find the leftmost node: include base case
+    tail recursion start returning the entire chain 
+
+Iterative: continues through a linked list with a void via pointers, while not null, grab the next null;
+
+Updates to the left tree pointers
+
+Special cases for erasing nodes with a key:
+
+1. Key not found
+2. Key not found 
+    i) Node has 2 children
+    ii) Node has 1 child to the left
+    iii) Node has 1 child to the right
+    iV) node has no children
+
+Promoting nodes to shift avl tree
+pointers returning the relevant posistion
+recursive function to delete the previous node set equal to the tm key node
+
+Generic Cases:
+
+
